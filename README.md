@@ -1,24 +1,16 @@
-# banana-big-world
-
-## Project setup
+# 🍌banana-big-world:🇨🇳::🇨🇳🇺🇳:
 ```
-npm install
+CSSer`s big carnival
+CSS爱好者们的大狂欢
 ```
-
-### Compiles and hot-reloads for development
+## 字体样式
 ```
-npm run serve
+修葺中·
 ```
-
-### Compiles and minifies for production
+## 用CSS做海报
 ```
-npm run build
+修葺中·
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 感谢:🇨🇳:
+thankx [Vue](https://cn.vuejs.org/).
