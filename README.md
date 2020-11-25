@@ -1,4 +1,4 @@
-# 🍌banana-big-world:🇨🇳::🇨🇳🇺🇳:
+# 🍌banana-big-world🍌
 ```
 CSSer`s big carnival
 CSS爱好者们的大狂欢
@@ -12,5 +12,5 @@ CSS爱好者们的大狂欢
 修葺中·
 ```
 
-### 感谢:🇨🇳:
-thankx [Vue](https://cn.vuejs.org/).
+### 感谢🇨🇳
+[Vue](https://cn.vuejs.org/).
