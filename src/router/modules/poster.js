@@ -1,10 +1,10 @@
 export default [
   {
-    path: '/',
+    path: '/poster',
     name: 'poster',
     component: () => import('@/views/poster/01_design'),
     meta: {
-      title: '香蕉大狂欢'
+      title: 'CSS海报'
     }
   },
 ]
