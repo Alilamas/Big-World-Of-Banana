@@ -1,16 +1,19 @@
 .qlinLoading {
   height: 200px;
 }
+
 .qlinyun {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 160px;
-  height: 160px;;
+  height: 160px;
+  ;
   margin: -80px 0px 0px -80px;
   background-color: transparent;
   border-radius: 50%;
   border: 2px solid #E3E4DC;
+
   &:before {
     content: '';
     position: absolute;
@@ -26,6 +29,7 @@
     clip: rect(0px, 35px, 35px, 0px);
     animation: rotate 3s linear infinite;
   }
+
   &:after {
     content: '';
     position: absolute;
@@ -42,6 +46,7 @@
     animation: rotate2 3s linear infinite;
   }
 }
+
 .qly {
   position: relative;
   top: 16%;
@@ -52,6 +57,7 @@
 $loading_base: 40px;
 $loading_length: $loading_base * (1.7320508075688772 / 2);
 $loading_transform: rotate(-60deg) skewY(30deg);
+
 .loading {
   width: $loading_length;
   height: 0px;
@@ -59,6 +65,7 @@ $loading_transform: rotate(-60deg) skewY(30deg);
   transform: $loading_transform;
   overflow: hidden;
   position: absolute;
+
   .ld {
     width: $loading_length;
     height: $loading_base;
@@ -67,6 +74,7 @@ $loading_transform: rotate(-60deg) skewY(30deg);
     overflow: hidden;
     text-align: center;
   }
+
   img {
     width: $loading_length;
     height: $loading_base;
@@ -85,8 +93,9 @@ $left in (1, 0px, 0px),
 (5, 67px, 0px),
 (6, 34px, -19px),
 (7, 34px, 19px) {
-  $time: 3s; 
+  $time: 3s;
   $delay: $time / 14;
+
   .loading.loading_#{$index} {
     top: $top;
     left: $left;
@@ -103,11 +112,13 @@ $left in (1, 0px, 0px),
     transform: scale(1) $loading_transform;
     opacity: 1;
   }
+
   15%,
   50% {
     transform: scale(0.5) $loading_transform;
     opacity: 0;
   }
+
   65% {
     transform: scale(1) $loading_transform;
     opacity: 1;
@@ -119,9 +130,11 @@ $left in (1, 0px, 0px),
     transform: rotate(0);
     clip: rect(0px, 35px, 35px, 0px);
   }
+
   50% {
     clip: rect(0px, 40px, 40px, 0px);
   }
+
   100% {
     transform: rotate(360deg);
     clip: rect(0px, 35px, 35px, 0px);
@@ -133,10 +146,12 @@ $left in (1, 0px, 0px),
     transform: rotate(0deg);
     clip: rect(0px, 164px, 150px, 0px);
   }
+
   50% {
     clip: rect(0px, 164px, 0px, 0px);
     transform: rotate(360deg);
   }
+
   100% {
     transform: rotate(720deg);
     clip: rect(0px, 164px, 150px, 0px);
@@ -147,7 +162,78 @@ $left in (1, 0px, 0px),
   0% {
     transform: rotate(0deg);
   }
+
   100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+//    rotate
+//    rotate
+//    rotate
+//    rotate
+$magic-number: 50;  //设置片数  360/n
+$magic-size: 100px;
+$speed: 0.017s;
+.magic {
+  height: 700px;
+  background-color: #140032;
+  overflow: hidden;
+  margin: 0;
+
+  *,
+  *:after,
+  *:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+.magic-h{
+  width: $magic-size;
+  height: $magic-size / 2;
+  span{  //el-base css
+    border-top-left-radius: $magic-size;
+    border-bottom-right-radius: $magic-size;
+  }
+  span{
+    animation: hexagon $speed linear infinite;
+    &:after,&:before{
+      content: '';
+      background-color: currentColor;
+      width: $magic-size/20;
+      height: $magic-size/20;
+      border-radius: 50%;
+    }
+    &:before{
+      transform: translate($magic-size / 2, -$magic-size / 4);
+    }
+    &:after{
+      transform: translate(-$magic-size / 2, $magic-size / 4);
+    }    
+  }
+  @for $i from 1 through $magic-number{     //打上火花！！！！！
+    &:nth-child(#{$i}){
+      $color: $i * 360 / $magic-number;
+      //
+      color: hsla($color,100%,50%,1);
+      transform: rotate(-$i * 360deg / $magic-number) translate($magic-size + 100px);
+      span{
+        animation-delay: -$i * $speed * 3 / $magic-number;
+        background-color: hsla($color,100%,50%,0.5);
+      }
+    }
+  }
+}
+@keyframes hexagon {
+  100%{
     transform: rotate(360deg);
   }
 }

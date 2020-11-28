@@ -54,12 +54,23 @@
         </div>
       </div>
     </div>
+    
+    <div class="workshop">
+      <h5>麒麟云loading</h5>
+      <div class="furnace magic">
+        <div v-for="(item,index) in num" :key='index' class="magic-h">
+          <span :class="item"></span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      num:50
+    };
   },
   methods: {},
 };
@@ -71,9 +82,6 @@ export default {
 .workshop {
   position: relative;
   background: LightYellow;
-  padding: 20px;
-  width: 100vw;
-  padding-left: 400px;
   min-height:150px;
 }
 .furnace {
@@ -98,7 +106,7 @@ $m1_length: $m1_base * 1.7320508075688772;
   background: rgba(0, 255, 0, 0.2);
   position: absolute;
   transform: scale(20px);
-  transform: rotate(60deg);
+  transform: magic(60deg);
 }
 .m1_base::after {
   content: "";
@@ -106,7 +114,7 @@ $m1_length: $m1_base * 1.7320508075688772;
   width: $m1_length;
   background: rgba(0, 0, 255, 0.2);
   position: absolute;
-  transform: rotate(-60deg);
+  transform: magic(-60deg);
 }
 // method-2
 $m2_base: 200px;
@@ -115,14 +123,14 @@ $m2_length: $m2_base * (1.7320508075688772 / 2);
   width: $m2_length;
   height: 0px;
   padding-bottom: $m2_base;
-  transform: rotate(-60deg) skewY(30deg);
+  transform: magic(-60deg) skewY(30deg);
   overflow: hidden;
   position: relative;
   .zxc {
     width: $m2_length;
     height: $m2_base;
     background: blue;
-    transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) magic(60deg);
     overflow: hidden;
     text-align: center;
   }
