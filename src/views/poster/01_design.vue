@@ -71,7 +71,7 @@ export default {
 <style lang="scss" scoped>
 .poster {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 ._01_design {
   background: #e1e1e1;

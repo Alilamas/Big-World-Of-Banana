@@ -26,8 +26,7 @@
     <div class="workshop">
       <h5>clip-path</h5>
       <div class="furnace m3">
-        <div class="m3_base">
-        </div>
+        <div class="m3_base"></div>
       </div>
       <div>
         <p>优点：box-shadow很棒</p>
@@ -43,22 +42,22 @@
               :key="index"
               :class="'loading loading_' + (index + 1)"
             >
-            <div class="ld">
-              <img :src="'/static/graphical/qlinLoading/' + (index + 1) + '.png'">
-            </div>
-            <div>
-
-            </div>
+              <div class="ld">
+                <img
+                  :src="'/static/graphical/qlinLoading/' + (index + 1) + '.png'"
+                />
+              </div>
+              <div></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div class="workshop">
       <h5>麒麟云loading</h5>
       <div class="furnace magic">
-        <div v-for="(item,index) in num" :key='index' class="magic-h">
+        <div v-for="(item, index) in num" :key="index" class="magic-h">
           <span :class="item"></span>
         </div>
       </div>
@@ -69,7 +68,7 @@
 export default {
   data() {
     return {
-      num:50
+      num: 50,
     };
   },
   methods: {},
@@ -82,7 +81,7 @@ export default {
 .workshop {
   position: relative;
   background: LightYellow;
-  min-height:150px;
+  min-height: 150px;
 }
 .furnace {
   padding: 50px 0px;
@@ -105,8 +104,7 @@ $m1_length: $m1_base * 1.7320508075688772;
   width: $m1_length;
   background: rgba(0, 255, 0, 0.2);
   position: absolute;
-  transform: scale(20px);
-  transform: magic(60deg);
+  transform: rotate(60deg);
 }
 .m1_base::after {
   content: "";
@@ -114,7 +112,7 @@ $m1_length: $m1_base * 1.7320508075688772;
   width: $m1_length;
   background: rgba(0, 0, 255, 0.2);
   position: absolute;
-  transform: magic(-60deg);
+  transform: rotate(-60deg);
 }
 // method-2
 $m2_base: 200px;
@@ -123,14 +121,14 @@ $m2_length: $m2_base * (1.7320508075688772 / 2);
   width: $m2_length;
   height: 0px;
   padding-bottom: $m2_base;
-  transform: magic(-60deg) skewY(30deg);
+  transform: rotate(-60deg) skewY(30deg);
   overflow: hidden;
   position: relative;
   .zxc {
     width: $m2_length;
     height: $m2_base;
     background: blue;
-    transform: skewY(-30deg) magic(60deg);
+    transform: skewY(-30deg) rotate(60deg);
     overflow: hidden;
     text-align: center;
   }
