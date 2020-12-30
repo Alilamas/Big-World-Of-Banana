@@ -13,7 +13,7 @@ export default [{
       title: '视觉错觉'
     }
   }, {
-    path: '/details/:id',
+    path: '/illusion/details/:id',
     name: 'illusionDetails',
     component: () => import('@/views/illusion/details'),
     meta: {

@@ -1,23 +1,23 @@
 export default [{
-  path: '/illusionHome',
-  name: 'illusionHome',
-  component: () => import('@/views/illusion/home'),
+  path: '/webpPageHome',
+  name: 'webpPageHome',
+  component: () => import('@/views/webpPage/home'),
   meta: {
-    title: '视觉错觉'
+    title: '页面设计'
   },
   children: [{
-    path: '/illusion',
-    name: 'illusion',
-    component: () => import('@/views/illusion'),
+    path: '/webpPage',
+    name: 'webpPage',
+    component: () => import('@/views/webpPage'),
     meta: {
-      title: '视觉错觉'
+      title: '页面设计'
     }
   }, {
-    path: '/details/:id',
-    name: 'illusionDetails',
-    component: () => import('@/views/illusion/details'),
+    path: '/webpPage/details/:id',
+    name: 'webpPageDetails',
+    component: () => import('@/views/webpPage/details'),
     meta: {
-      title: '视觉错觉'
+      title: '页面设计'
     }
   }]
 }]

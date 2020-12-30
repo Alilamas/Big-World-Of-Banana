@@ -1,14 +1,14 @@
 <template>
-  <div id="illusionHome">
+  <div id="webPageHome">
     <div class="head">
       <div class="logo">
         <div class="is_hover">
           <div class="logo_box"></div>
-          <p>视觉错觉</p>
+          <p>页面设计</p>
         </div>
         <div class="no_hover">
           <div class="logo_box"></div>
-          <p>视觉错觉</p>
+          <p>页面设计</p>
         </div>
       </div>
     </div>
@@ -40,20 +40,27 @@ export default {
   position: absolute;
 }
 
-#illusionHome {
-  min-height: 100vh;
+#webPageHome {
+  height: 100vh;
   width: 100%;
   background: #000;
+  overflow: hidden;
 }
 .head {
   box-sizing: border-box;
   width: 100vw;
-  height: 50px;
+  height: 3px;
   line-height: 50px;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
   padding: 0 20px;
   position: relative;
+  overflow: hidden;
+  transition: all .2s;
+  &:hover {
+    height: 50px;
+  transition: all .35s;
+  }
 }
 .is_hover,
 .no_hover {

@@ -1,0 +1,84 @@
+#kylinCard {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-linear-gradient(left top, #005aa7, #fffde4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  h1 {
+    font-size: 60px;
+    letter-spacing: 20px;
+    background-image: -webkit-linear-gradient(right bottom, #005aa7, #fffde4);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .card {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
+    height: 350px;
+    background: -webkit-linear-gradient(left top,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.1));
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-left: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 15px 30px 30px;
+    color: #fff;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 24px;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    }
+
+    img {
+      width: 080px;
+    }
+  }
+
+  .info {
+    * {
+      font-weight: 300;
+      text-shadow: 0 0 4px #fff;
+    }
+
+    h5 {
+      font-size: 50px;
+      margin-bottom: 24px;
+      letter-spacing: 4px;
+      text-shadow: 0 0 6px #fff, 0 0 10px #fff;
+    }
+
+    .id_num {
+      font-size: 24px;
+      margin-bottom: 20px;
+
+      span {
+        margin-right: 8px;
+        letter-spacing: 2px;
+      }
+    }
+
+    .id_department {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .id_day {
+      font-size: 16px;
+    }
+  }
+}
