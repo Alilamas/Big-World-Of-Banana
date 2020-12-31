@@ -7,10 +7,6 @@
   justify-content: center;
   position: relative;
 
-  * {
-    font-family: 'Vidaloka';
-  }
-
   .card {
     width: 240px;
     height: 416px;
@@ -21,6 +17,26 @@
     justify-content: space-between;
     position: relative;
     padding: 20px;
+    transform: translateY(-40px);
+    margin-right: 100px;
+  }
+
+  .shadow {
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 50%;
+    width: 240px;
+    height: 1px;
+    transform: translateX(-50%) skewX(-60deg);
+    background: transparent;
+    box-shadow: 140px 80px 10px rgba(0, 0, 0, 1),
+    150px 74px 10px rgba(0, 0, 0, 1),
+    160px 68px 10px rgba(0, 0, 0, 1),
+    170px 62px 10px rgba(0, 0, 0, .9),
+    180px 56px 10px rgba(0, 0, 0, .7),
+    190px 50px 10px rgba(0, 0, 0, .5),
+    200px 44px 10px rgba(0, 0, 0, .2),;
   }
 
   .hole {
@@ -36,18 +52,44 @@
   }
 
   .top {
-    padding-bottom: 12px;
-    border-bottom: 1px solid #000000c0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
 
     h5 {
       font-size: 24px;
-      margin-bottom: 40px;
+      margin-bottom: 70px;
+      font-family: 'PlayfairDisplay';
     }
 
     p {
       font-size: 16px;
       font-weight: 700;
       margin-bottom: 2px;
+      font-family: 'Roboto';
+    }
+  }
+
+  .bottom {
+    font-family: 'Roboto';
+
+    .position {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .remarks {
+      margin-bottom: 50px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      img {
+        width: 40px;
+      }
     }
   }
 
@@ -58,9 +100,15 @@
   .card:nth-child(2) {
     background: -webkit-linear-gradient(left top, #09080e, #3c3c44);
     color: #fff;
+    transform: translateY(40px);
+
+    .top {
+      border-bottom: 1px solid rgba(255, 255, 255, .8);
+    }
   }
 
   .card:nth-child(3) {
     background: -webkit-linear-gradient(left top, #d3d3d5, #e0e0e0);
+    margin-right: 0px;
   }
 }

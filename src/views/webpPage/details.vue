@@ -2,32 +2,68 @@
   <div id="webpPageDetails">
     <div v-if="id == 1" id="workCard">
       <div class="card">
+        <div class="shadow"></div>
         <div class="hole"></div>
         <div class="top">
           <h5>kylin</h5>
           <p>1st Cross-Border</p>
           <p>E-Commerce Summit 2020</p>
-          <p>26.- 27. December</p>
+          <p>26. - 27. December</p>
         </div>
         <div class="bottom">
-          <p></p>
-          Engineer
-          <p>Front End</p>
-          <div>
-            <p>kylin</p>
-            <img src="/static/webpPage/2.png" />
+          <p class="position">Lecturer</p>
+          <p class="remarks">Hongyu Education</p>
+          <div class="logo">
+            <p>hy.gm</p>
+            <img src="/static/webpPage/kylin-b.png" />
           </div>
         </div>
       </div>
-      <div class="card"></div>
-      <div class="card"></div>
+
+      <div class="card">
+        <div class="shadow"></div>
+        <div class="hole"></div>
+        <div class="top">
+          <h5>kylin</h5>
+          <p>1st Cross-Border</p>
+          <p>E-Commerce Summit 2020</p>
+          <p>26. - 27. December</p>
+        </div>
+        <div class="bottom">
+          <p class="position">Speaker</p>
+          <p class="remarks">GMDIGITAL</p>
+          <div class="logo">
+            <p>VIP</p>
+            <img src="/static/webpPage/kylin-w.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="shadow"></div>
+        <div class="hole"></div>
+        <div class="top">
+          <h5>kylin</h5>
+          <p>1st Cross-Border</p>
+          <p>E-Commerce Summit 2020</p>
+          <p>26. - 27. December</p>
+        </div>
+        <div class="bottom">
+          <p class="position">Engineer</p>
+          <p class="remarks">R&D Department</p>
+          <div class="logo">
+            <p>ky.gm</p>
+            <img src="/static/webpPage/kylin-b.png" />
+          </div>
+        </div>
+      </div>
     </div>
     <div v-if="id == 2" id="kylinCard">
       <h1>KylinPlan ID Card</h1>
       <div class="card">
         <div class="top">
           <p>ID card</p>
-          <img src="/static/webpPage/2.png" />
+          <img src="/static/webpPage/kylin-w.png" />
         </div>
         <div class="info">
           <h5>{{ info.name }}</h5>
@@ -86,17 +122,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@font-face {
-  font-family: "Vidaloka";
-  src: url("/tff/Vidaloka-Regular.ttf");
-}
-@font-face {
-  font-family: "KaushanScript";
-  src: url("/tff/KaushanScript-Regular.ttf");
-}
 // #webpPageDetails {
 // }
 
-@import "./css/1.scss"; //  工牌 workCard
-@import "./css/2.scss"; //  麒麟ID卡 kylinCard
+@import "./css/1.scss"; //  麒麟-参会证 workCard
+@import "./css/2.scss"; //  麒麟计划-ID卡 kylinCard
 </style>
