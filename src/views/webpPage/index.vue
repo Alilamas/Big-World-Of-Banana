@@ -2,6 +2,15 @@
   <div id="webpPage">
     <ul>
       <li
+        v-for="item in funList"
+        :key="item.id"
+        @click="toRouter('webpPageDetails', item.id)"
+      >
+        {{ item.name }}
+      </li>
+    </ul>
+    <ul>
+      <li
         v-for="item in neumorphismList"
         :key="item.id"
         @click="toRouter('webpPageDetails', item.id)"
@@ -24,16 +33,22 @@
 export default {
   data() {
     return {
+      funList: [
+        {
+          id: 'haveFUN',
+          name: "haveFUN"
+        }
+      ],
       neumorphismList: [
         {
           id: 1,
-          name: "麒麟物通卡"
+          name: "麒麟-参会证"
         }
       ],
       glassmorphismList: [
         {
           id: 2,
-          name: "麒麟卡"
+          name: "麒麟计划-ID"
         }
       ],
     };

@@ -1,0 +1,45 @@
+#haveFUN {
+  width: 1100px;
+  height: 300px;
+  background: -webkit-radial-gradient(50% -20%, farthest-side, #f50daf, #4ba1e7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  h1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 60px;
+  }
+
+  .mask {
+    height: 300px;
+    position: absolute;
+    left: 0;
+    backdrop-filter: blur(3px);
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .mask1 {
+    width: 206px;
+    background: -webkit-linear-gradient(right top,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(2px);
+  }
+
+  .mask2 {
+    width: 498px;
+    background: -webkit-linear-gradient(right top,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.05));
+  }
+
+  .mask3 {
+    width: 665px;
+    background: -webkit-linear-gradient(right top,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.05));
+  }
+}
