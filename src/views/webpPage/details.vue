@@ -16,6 +16,19 @@
         <img src="/static/webpPage/kylin-w.png" />
       </div>
     </div>
+    <!-- bszh-->
+    <div v-if="id == 'bszh'" id="bszh">
+      <div class="card">
+        <div class="main">
+          <h1>傻<span>+</span></h1>
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <img src="/static/webpPage/bszh.png" />
+        </div>
+        <h5>不说簪花</h5>
+          <p id="BananaWrold" title="asd">Banana wrold</p>
+      </div>
+    </div>
     <!-- 麒麟-参会证 -->
     <div v-if="id == 1" id="workCard">
       <div class="card">
@@ -152,6 +165,7 @@ export default {
 
 @import "./css/haveFUN.scss"; //  haveFUN
 @import "./css/hello2021.scss"; //  hello2021
+@import "./css/bszh.scss"; //  不说簪花
 @import "./css/1.scss"; //  麒麟-参会证 workCard
 @import "./css/2.scss"; //  麒麟计划-ID卡 kylinCard
 @import "./css/business-card.scss"; //  麒麟计划-ID卡 kylinCard

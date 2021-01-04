@@ -50,6 +50,10 @@ export default {
         {
           id: 2021,
           name: "hello,2021"
+        },
+        {
+          id: 'bszh',
+          name: "不说簪花"
         }
       ],
       paperList: [
