@@ -1,12 +1,20 @@
 <template>
   <div id="webpPageDetails">
-    
-    <!-- 麒麟计划-ID卡-->
+    <!-- haveFUN麒麟计划-ID卡-->
     <div v-if="id == 'haveFUN'" id="haveFUN">
       <h1>GO, BANANA AND HAVE FUN!</h1>
       <div class="mask mask1"></div>
       <div class="mask mask2"></div>
       <div class="mask mask3"></div>
+    </div>
+    <!-- hello！2021-->
+    <div v-if="id == 2021" id="hello2021">
+      <h1>Hello,<span>2021 & kylin</span></h1>
+      <div>
+        <p>1</p>
+        <h5>Banana</h5>
+        <img src="/static/webpPage/kylin-w.png" />
+      </div>
     </div>
     <!-- 麒麟-参会证 -->
     <div v-if="id == 1" id="workCard">
@@ -65,7 +73,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- 麒麟计划-ID卡-->
     <div v-if="id == 2" id="kylinCard">
       <h1>KylinPlan ID Card</h1>
@@ -90,6 +98,14 @@
             }}</span>
           </p>
         </div>
+      </div>
+    </div>
+
+    <!-- 名片 -->
+    <div v-if="id == 'bc1'" id="bc1">
+      <div class="card">
+        <div></div>
+        <div></div>
       </div>
     </div>
   </div>
@@ -135,6 +151,8 @@ export default {
 // }
 
 @import "./css/haveFUN.scss"; //  haveFUN
+@import "./css/hello2021.scss"; //  hello2021
 @import "./css/1.scss"; //  麒麟-参会证 workCard
 @import "./css/2.scss"; //  麒麟计划-ID卡 kylinCard
+@import "./css/business-card.scss"; //  麒麟计划-ID卡 kylinCard
 </style>

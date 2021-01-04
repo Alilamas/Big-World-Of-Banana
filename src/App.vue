@@ -24,10 +24,6 @@
   src: url("/tff/Roboto-Black.ttf");
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("/tff/Roboto-Black.ttf");
-}
-@font-face {
   font-family: "Pacifico";
   src: url("/tff/Pacifico-Regular.ttf");
 }
@@ -54,6 +50,23 @@
 @font-face {
   font-family: "Allura";
   src: url("/tff/Allura-Regular.ttf");
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("/tff/NotoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SixCaps";
+  src: url("/tff/SixCaps.ttf");
+}
+@font-face {
+  font-family: "GrandHotel";
+  src: url("/tff/GrandHotel-Regular.ttf");
+}
+@font-face {
+  font-family: "Megrim";
+  src: url("/tff/Megrim.ttf");
 }
 @import './assets/reset.css';
 </style>

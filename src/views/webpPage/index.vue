@@ -11,6 +11,15 @@
     </ul>
     <ul>
       <li
+        v-for="item in paperList"
+        :key="item.id"
+        @click="toRouter('webpPageDetails', item.id)"
+      >
+        {{ item.name }}
+      </li>
+    </ul>
+    <ul>
+      <li
         v-for="item in neumorphismList"
         :key="item.id"
         @click="toRouter('webpPageDetails', item.id)"
@@ -37,7 +46,17 @@ export default {
         {
           id: 'haveFUN',
           name: "haveFUN"
+        },
+        {
+          id: 2021,
+          name: "hello,2021"
         }
+      ],
+      paperList: [
+        {
+          id: 'bc1',
+          name: "名片-纸质-暗色"
+        },
       ],
       neumorphismList: [
         {

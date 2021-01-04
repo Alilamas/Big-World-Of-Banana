@@ -1,0 +1,17 @@
+#bc1 {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom,#1c2630,#19212c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .card {
+    background: #27313b;
+    width: 600px;
+    height: 300px;
+    box-shadow: inset 15px 15px 30px -15px rgba(255, 255, 255, 0.05), 3px 3px 3px  rgba(0, 0, 0, 0.1);
+  }
+}
+//#f8b567  //#2ed2d4  //#26bd9e

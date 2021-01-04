@@ -1,0 +1,55 @@
+#hello2021 {
+  width: 1200px;
+  height: 800px;
+  background: -webkit-radial-gradient(10% 110%, farthest-side, #ffc2cd, #db6084);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  h1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 100px;
+    padding-top:300px;
+    span {
+      font-family: 'Cookie';font-size: 120px;
+
+    }
+  }
+  div {
+    width: 350px;
+    height: 550px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotateZ( -15deg);
+    background: -webkit-linear-gradient(left bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.1));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    *{
+      color: rgba(255, 255, 255, 0.8); 
+
+    }
+    p {
+      font-family: 'NotoSans';
+      font-weight: 700;
+      font-size: 160px;
+    }
+    h5 {
+      font-size: 50px;
+      margin-bottom: 60px;
+      font-weight: 500;
+    }
+    img {
+      width: 80px;
+      margin-bottom: 110px;
+    }
+  }
+}
