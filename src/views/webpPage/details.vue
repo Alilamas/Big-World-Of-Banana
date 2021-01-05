@@ -1,5 +1,6 @@
 <template>
   <div id="webpPageDetails">
+
     <!-- haveFUN麒麟计划-ID卡-->
     <div v-if="id == 'haveFUN'" id="haveFUN">
       <h1>GO, BANANA AND HAVE FUN!</h1>
@@ -7,6 +8,7 @@
       <div class="mask mask2"></div>
       <div class="mask mask3"></div>
     </div>
+
     <!-- hello！2021-->
     <div v-if="id == 2021" id="hello2021">
       <h1>Hello,<span>2021 & kylin</span></h1>
@@ -16,6 +18,7 @@
         <img src="/static/webpPage/kylin-w.png" />
       </div>
     </div>
+
     <!-- bszh-->
     <div v-if="id == 'bszh'" id="bszh">
       <div class="card">
@@ -29,6 +32,7 @@
           <p id="BananaWrold" title="asd">Banana wrold</p>
       </div>
     </div>
+    
     <!-- 麒麟-参会证 -->
     <div v-if="id == 1" id="workCard">
       <div class="card">
@@ -117,8 +121,14 @@
     <!-- 名片 -->
     <div v-if="id == 'bc1'" id="bc1">
       <div class="card">
-        <div></div>
-        <div></div>
+        <div class="info">
+          <h1 class="name">Alilamas Banana</h1>
+          <p class="position"></p>
+          <p class="Co.">GM </p>
+          <p class="email"></p>
+          <p class="iphone"></p>
+        </div>
+        <div class="decorate"></div>
       </div>
     </div>
   </div>

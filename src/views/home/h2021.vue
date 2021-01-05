@@ -388,3 +388,8 @@
 <script>
 export default {};
 </script>
+<style lang="scss" scoped>
+svg {
+  width: 50vw;
+}
+</style>

@@ -49,10 +49,15 @@
         <p class="m_additional"></p>
         <div class="welcome_message"></div>
         <div class="m_jion">
-          <div></div>
-          <div></div>
+          <div class="jion1">
+            <p class="nohover">How to contact me?</p>
+            <p class="hover">怎么联系上我？</p>
+          </div>
+          <div class="jion2">双手举过头顶 🤗</div>
+          <div class="jion3">然后心里默念"Banana 🍌!"</div>
+          <div class="jion4">我也不会告诉你 😎</div>
         </div>
-        <div class="m_link"></div>
+        <MyLink class="m_link"></MyLink>
         <H2021 class="hello2021" />
       </div>
     </div>
@@ -60,9 +65,11 @@
 </template>
 <script>
 import H2021 from "./h2021";
+import MyLink from "./myLink";
 export default {
   components: {
     H2021,
+    MyLink
   },
   data() {
     return {
@@ -246,7 +253,129 @@ nav {
   width: 750px;
   font-size: 60px;
   line-height: 120px;
+  margin-bottom: 40px;
 }
+.m_jion {
+  color: #fff;
+  height: 240px;
+  position: relative;
+  div {
+    width: 200px;
+    height: 65px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transform: translate(0, 0);
+    transition: all 0.5s;
+  }
+  .jion1 {
+    background: rgb(0, 195, 255);
+    cursor: pointer;
+    z-index: 10;
+    p {
+      position: absolute;
+      transition: all 0.5s;
+    }
+    .nohover {
+      opacity: 1;
+    }
+    .hover {
+      opacity: 0;
+    }
+  }
+  .jion2 {
+    background: transparent;
+    z-index: 9;
+  }
+  .jion3 {
+    background: transparent;
+    z-index: 8;
+  }
+  .jion4 {
+    background: transparent;
+    z-index: 7;
+  }
+  &:hover {
+    .jion1 {
+      transform: translate(-35px, -25px);
+      transition: all 0.5s;
+      p {
+        transition: all 0.5s;
+      }
+    }
+    .nohover {
+      opacity: 0;
+    }
+    .hover {
+      opacity: 1;
+    }
+    .jion2 {
+      transform: translate(35px, 25px);
+      background: #34a853;
+      transition: all 0.5s;
+    }
+    .jion3 {
+      transform: translate(35px, 25px);
+      animation: jion3 2s 1 forwards;
+      transition: all 0.5s;
+    }
+    .jion4 {
+      transform: translate(35px, 25px);
+      animation: jion4 2s 1 forwards;
+      transition: all 0.5s;
+    }
+    @keyframes jion3 {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(35px, 25px);
+      }
+      35% {
+        transform: translate(35px, 25px);
+      }
+      50% {
+        transform: translate(105px, 70px);
+        background: #fbbc05;
+      }
+      100% {
+        transform: translate(105px, 70px);
+        background: #fbbc05;
+      }
+    }
+    @keyframes jion4 {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(35px, 25px);
+      }
+      35% {
+        transform: translate(35px, 25px);
+      }
+      50% {
+        transform: translate(105px, 70px);
+      }
+      80% {
+        transform: translate(105px, 70px);
+      }
+      95% {
+        transform: translate(175px, 120px);
+        background: #ea4335;
+      }
+      100% {
+        transform: translate(175px, 120px);
+        background: #ea4335;
+      }
+    }
+  }
+}
+
+.m_link {
+}
+
 .hello2021 {
   position: fixed;
   right: 10px;
