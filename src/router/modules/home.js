@@ -2,7 +2,7 @@ export default [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/views/home/index'),
+    component: () => import('@/views/_00_page/home'),
     meta: {
       title: '香蕉大狂欢'
     }
