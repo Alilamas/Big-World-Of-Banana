@@ -75,17 +75,21 @@ export default {
     return {
       routerList: [
         {
-          name: "dESIGN",
-          router: "webpPage",
-        },
-        {
           name: "bASIC",
           router: "graphical",
+        },
+        {
+          name: "dESIGN",
+          router: "webpPage",
         },
         {
           name: "iLLUSION",
           router: "illusion",
         },
+        // {
+        //   name: "uSED",
+        //   router: "used",
+        // },
       ],
     };
   },
@@ -374,6 +378,9 @@ nav {
 }
 
 .m_link {
+  position: fixed;
+  left: 8vw;
+  bottom: 8vh;
 }
 
 .hello2021 {

@@ -13,8 +13,8 @@ const routes = [
     component: () => import('@/layout/banana'),
     children: [
       ...Home, //首页
-      ...Poster, //海报
       ...Graphical, //图形
+      ...Poster, //海报
       ...Illusion, //错觉
       ...WebpPage, //页面
     ]
