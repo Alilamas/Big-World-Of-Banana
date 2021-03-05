@@ -1,95 +1,32 @@
 <template>
-  <div id="webpPage">
-    <ul>
-      <li
-        v-for="item in funList"
-        :key="item.id"
-        @click="toRouter('webpPageDetails', item.id)"
-      >
-        {{ item.name }}
-      </li>
-    </ul>
-    <ul>
-      <li
-        v-for="item in paperList"
-        :key="item.id"
-        @click="toRouter('webpPageDetails', item.id)"
-      >
-        {{ item.name }}
-      </li>
-    </ul>
-    <ul>
-      <li
-        v-for="item in neumorphismList"
-        :key="item.id"
-        @click="toRouter('webpPageDetails', item.id)"
-      >
-        {{ item.name }}
-      </li>
-    </ul>
-    <ul>
-      <li
-        v-for="item in glassmorphismList"
-        :key="item.id"
-        @click="toRouter('webpPageDetails', item.id)"
-      >
-        {{ item.name }}
-      </li>
-    </ul>
+  <div id="designIndex">
+    <h1 class="h1_web">Web</h1>
+    <h1 class="h1_design">design</h1>
+    <div class='vertical0'></div>
+    <div class='vertical1'></div>
+    <div class='transverse0'></div>
+    <div class='transverse1'></div>
+    
+
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {
-      funList: [
-        {
-          id: 'haveFUN',
-          name: "haveFUN"
-        },
-        {
-          id: 2021,
-          name: "hello,2021"
-        },
-        {
-          id: 'bszh',
-          name: "不说簪花"
-        }
-      ],
-      paperList: [
-        {
-          id: 'bc1',
-          name: "名片-纸质-暗色"
-        },
-      ],
-      neumorphismList: [
-        {
-          id: 1,
-          name: "麒麟-参会证"
-        }
-      ],
-      glassmorphismList: [
-        {
-          id: 2,
-          name: "麒麟计划-ID"
-        }
-      ],
-    };
+    return {};
   },
-  methods: {
-    toRouter(name, id) {
-      id
-        ? this.$router.push({ name, params: { id } })
-        : this.$router.push({ name });
-    },
-  },
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>
-ul {
-  li {
-    color: #fff;
-    cursor: pointer;
-  }
+#designIndex {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 86px;
 }
 </style>

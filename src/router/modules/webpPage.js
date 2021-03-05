@@ -1,14 +1,21 @@
 export default [{
-  path: '/webpPageHome',
-  name: 'webpPageHome',
+  path: '/designHome',
+  name: 'designHome',
   component: () => import('@/views/_02_design/home'),
   meta: {
     title: '页面设计'
   },
   children: [{
+    path: '/design',
+    name: 'design',
+    component: () => import('@/views/_02_design'),
+    meta: {
+      title: '页面设计'
+    }
+  },{
     path: '/webpPage',
     name: 'webpPage',
-    component: () => import('@/views/_02_design'),
+    component: () => import('@/views/_02_design/webpPage'),
     meta: {
       title: '页面设计'
     }

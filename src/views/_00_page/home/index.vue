@@ -80,16 +80,16 @@ export default {
         },
         {
           name: "dESIGN",
-          router: "webpPage",
+          router: "design",
         },
         {
           name: "iLLUSION",
           router: "illusion",
         },
-        // {
-        //   name: "uSED",
-        //   router: "used",
-        // },
+        {
+          name: "uSED",
+          router: "usedHome",
+        },
       ],
     };
   },

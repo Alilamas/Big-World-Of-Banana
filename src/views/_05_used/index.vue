@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <nav>asd</nav>
+  </div>
 </template>
 
 <script>

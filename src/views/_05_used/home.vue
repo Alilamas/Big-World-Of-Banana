@@ -1,15 +1,13 @@
 <template>
   <div>
-    <transition>
-      <router-link></router-link>
-    </transition>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {}
+    return {};
   },
-}
+};
 </script>

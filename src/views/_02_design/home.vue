@@ -1,17 +1,40 @@
 <template>
-  <div id="webPageHome">
-    <div class="head">
-      <div class="logo">
-        <div class="is_hover">
-          <div class="logo_box"></div>
-          <p>页面设计</p>
-        </div>
-        <div class="no_hover">
-          <div class="logo_box"></div>
-          <p>页面设计</p>
+  <div id="design">
+    <div class="background"></div>
+    <nav>
+      <div class="bg-top">
+        <div class="menuIcon">
+          <div class="line0"></div>
+          <div class="line1"></div>
+          <div class="line2"></div>
         </div>
       </div>
-    </div>
+      <ul class="bg-bottom">
+        <li>
+          <svg  @click="toRouter('home')"
+            t="1614936052778"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="845"
+            width="32"
+            height="32"
+          >
+            <path
+              d="M866.113679 757.686803c-139.604046 18.6864-290.023167-34.557041-396.126082-140.659956C363.020756 510.060006 310.417261 362.232664 329.295644 221.860683a75.09757 75.09757 0 0 0-0.799931-24.093937c0-1.087907 0.447962-2.047825 0.319972-3.135731-2.783762-31.805277 0.319973-56.41117 10.207126-78.393288 6.30346-14.206784 10.527099-21.246181 13.214869-24.701885a31.99726 31.99726 0 0 0 9.279205-62.554644l-0.767934-0.22398A178.640704 178.640704 0 0 1 312.721063 5.527207a31.99726 31.99726 0 0 0-48.123879 15.838644c-17.758479 50.171704-38.876671 90.74423-64.506477 124.149369-1.567866 1.343885-3.263721 2.527784-4.767592 4.031655a450.041465 450.041465 0 0 0-43.804249 51.03563C13.802658 387.990458 41.768264 667.486526 216.569296 850.830828c105.174994 110.070575 248.746701 173.169172 393.982266 173.169172 125.685238 0 241.899287-47.003975 328.29189-133.428575 21.150189-21.342173 26.781707-52.539501 14.750736-81.40103-14.494759-34.749025-51.611581-56.443167-87.480509-51.515589z m26.429737 88.7604c-73.273726 73.273726-173.42515 113.590274-281.991854 113.590274-127.829055 0-254.570202-55.899214-347.68223-153.362869-153.682841-161.1702-179.408638-405.437284-59.834877-568.111355 11.934978-16.126619 24.221926-30.461392 38.812677-44.956151 0.959918-0.639945 2.559781-1.503871 5.279548-1.503871 6.783419 0 15.806647 5.663515 18.366427 15.294691a12.510929 12.510929 0 0 1 0.415965 5.631517c-21.534156 160.306274 37.820762 328.259893 158.834399 449.241534 103.70312 103.70312 243.691134 163.186027 384.063115 163.186027 22.07811 0 44.220214-1.471874 68.282153-4.543611 8.28729 0 14.846729 6.719425 17.438507 12.926893 3.103734 7.455362-0.095992 10.687085-1.98383 12.606921z"
+              fill="#cccccc"
+              p-id="846"
+            ></path>
+            <path
+              d="M255.829935 480.81451c-3.071737-11.998973-5.503529-24.285921-7.35937-35.96492a15.870641 15.870641 0 0 0-18.302433-13.310861 15.99863 15.99863 0 0 0-13.31086 18.302433c1.98383 12.638918 4.6716 25.917781 7.999315 38.876672a15.99863 15.99863 0 1 0 30.973348-7.903324zM642.740805 838.54388a399.325808 399.325808 0 0 1-35.96492-7.295376 569.135268 569.135268 0 0 1-37.02083-11.710997 390.942526 390.942526 0 0 1-37.436795-16.126619 549.072986 549.072986 0 0 1-37.3728-19.74231 598.028794 598.028794 0 0 1-72.793767-52.251526 554.928484 554.928484 0 0 1-66.68229-66.714287 532.018446 532.018446 0 0 1-51.995548-72.4098 540.433725 540.433725 0 0 1-19.902296-37.308806c-3.295718-6.879411-6.271463-13.726825-9.663172-21.566153a15.550668 15.550668 0 0 0-20.862214-7.775334 16.446592 16.446592 0 0 0-8.06331 21.534156c3.135732 7.199384 6.271463 14.398767 9.69517 21.566153 6.271463 13.182871 13.502844 26.365742 21.214184 39.772595a569.263257 569.263257 0 0 0 55.259268 76.953411 588.301627 588.301627 0 0 0 108.470712 99.959441c12.862899 9.215211 25.6938 17.790477 39.13265 25.853786 13.150874 7.551353 26.653718 14.782734 39.548613 20.894211 11.966975 6.015485 25.149847 11.679 40.540529 17.438507 13.150874 4.607605 26.333745 8.863241 39.804592 12.574923 13.31086 3.327715 26.237753 5.983488 39.228641 7.999315a15.99863 15.99863 0 0 0 4.863583-31.613293z"
+              fill="#cccccc"
+              p-id="847"
+            ></path>
+          </svg>
+        </li>
+      </ul>
+    </nav>
     <router-view />
   </div>
 </template>
@@ -30,100 +53,104 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-//logo的点
-@mixin point {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background: #000;
-  border-radius: 50%;
-  position: absolute;
-}
-
-#webPageHome {
-  height: 100vh;
-  width: 100%;
-  background: #000;
-  overflow: hidden;
-}
-.head {
-  box-sizing: border-box;
+#design {
   width: 100vw;
-  height: 3px;
-  line-height: 50px;
-  background: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
-  padding: 0 20px;
+  height: 100vh;
+  background: url("/static/design/black.png");
+  background-size: cover;
+}
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-radial-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 1) 100%
+  );
+  box-shadow: inset 0 0 2px #fff;
+}
+nav {
+  float: left;
+  box-sizing: border-box;
+  width: 120px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: #0c0c0c99;
+  border-right: 1px solid #ffffff33;
+  color: #ccc;
   position: relative;
-  overflow: hidden;
-  transition: all .2s;
-  &:hover {
-    height: 50px;
-  transition: all .35s;
-  }
+  z-index: 10001;
 }
-.is_hover,
-.no_hover {
+.bg-top {
+  box-sizing: border-box;
+  width: 100%;
+  height: 120px;
+  background: #141416;
+  padding-bottom: 42px;
   display: flex;
-  align-items: center;
-  position: absolute;
-  left: 20px;
+  justify-content: center;
+  align-items: flex-end;
   cursor: pointer;
-  .logo_box {
-    margin-right: 20px;
-    position: relative;
-    width: 40px;
-    height: 26px;
-    border-radius: 4px;
-    border: 3px solid #000;
-    background: transparent;
-    &::before {
-      @include point;
-      top: 4px;
-      left: 4px;
+  transition: .4s all;
+  &:hover {
+    height: 974px;
+    transition: 1s all;
+    padding-bottom: 140px;
+    .menuIcon {
+      transform: rotate(-90deg);
+      transition: 1s all;
     }
-    &::after {
-      @include point;
-      bottom: 4px;
-      right: 4px;
-    }
+  .line0 {
+    width: 24px;
+    transition: 1s all;
   }
-
-  p {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    background: #000;
-    background-clip: text;
-    background-image: -webkit-linear-gradient(left, transparent, transparent);
-    -webkit-text-fill-color: transparent;
+  .line1 {
+    transform: translateX(12px);
+      transition: 1s all;
+  }
+  .line2 {
+    width: 24px;
+    transform: translateX(24px);
+    transition: 1s all;
+  }
   }
 }
-.logo {
-  .is_hover {
-    opacity: 0;
+.menuIcon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  transition: .4s all;
+  > div {
+    height: 4px;
+    border-radius: 2px;
+    background: #bbb;
   }
-  .no_hover {
-    opacity: 1;
+  .line0 {
+    width: 36px;
   }
-
-  &:hover {
-    * {
-      transition: all 0.4s;
-    }
-    .is_hover {
-      opacity: 1;
-      .logo_box {
-        background: -webkit-linear-gradient(left top, #e7abe1, #efafa9);
-      }
-      p {
-        background-image: -webkit-linear-gradient(left, #f24769, #8302bd);
-      }
-    }
-    .no_hover {
-      opacity: 0;
-    }
+  .line1 {
+    width: 24px;
+  }
+  .line2 {
+    width: 12px;
+  }
+}
+.bg-bottom {
+  position: absolute;
+  left: 44px;
+  bottom: 28px;
+  li {
+    margin-bottom: 20px;
+  }
+  svg {
+    cursor: pointer;
   }
 }
 </style>

@@ -5,7 +5,8 @@ export default [{
   meta: {
     title: '实践出真知'
   },
-  children: [{
+  children: [
+    {
       path: 'used',
       name: 'used',
       component: () => import('@/views/_05_used'),
@@ -14,7 +15,7 @@ export default [{
       }
     },
     {
-      path: 'webpPage',
+      path: 'kylinCup',
       name: 'kylinCup',
       component: () => import('@/views/_05_used/kylinCup'),
       meta: {
