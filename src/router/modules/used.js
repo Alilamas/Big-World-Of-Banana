@@ -1,10 +1,25 @@
-export default [
-  {
-    path: '/poster',
-    name: 'poster',
-    component: () => import('@/views/_03_poster/01_design'),
-    meta: {
-      title: 'CSS海报'
-    }
+export default [{
+  path: '/usedHome',
+  name: 'usedHome',
+  component: () => import('@/views/_05_used/home'),
+  meta: {
+    title: '实践出真知'
   },
-]
+  children: [{
+      path: 'used',
+      name: 'used',
+      component: () => import('@/views/_05_used'),
+      meta: {
+        title: '实践出真知'
+      }
+    },
+    {
+      path: 'webpPage',
+      name: 'kylinCup',
+      component: () => import('@/views/_05_used/kylinCup'),
+      meta: {
+        title: '麒麟杯'
+      }
+    }
+  ]
+}]

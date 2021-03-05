@@ -1,17 +1,23 @@
 export default [{
-  path: '/usedHome',
-  name: 'usedHome',
-  component: () => import('@/views/_05_used/home'),
+  path: '/webpPageHome',
+  name: 'webpPageHome',
+  component: () => import('@/views/_02_design/home'),
   meta: {
-    title: '实践出真知'
+    title: '页面设计'
   },
   children: [{
     path: '/webpPage',
     name: 'webpPage',
-    component: () => import('@/views/_05_used'),
+    component: () => import('@/views/_02_design'),
     meta: {
-      title: '麒麟杯'
+      title: '页面设计'
     }
-  }
-  ]
+  }, {
+    path: '/webpPage/details/:id',
+    name: 'webpPageDetails',
+    component: () => import('@/views/_02_design/details'),
+    meta: {
+      title: '页面设计'
+    }
+  }]
 }]

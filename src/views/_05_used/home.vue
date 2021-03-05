@@ -1,5 +1,9 @@
 <template>
-  <div></div>
+  <div>
+    <transition>
+      <router-link></router-link>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -9,6 +13,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-
-</style>
