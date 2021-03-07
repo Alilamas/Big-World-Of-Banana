@@ -66,7 +66,8 @@ export default {
   width: 100vw;
   height: 100vh;
   background: -webkit-radial-gradient(
-    rgba(0, 0, 0, 0.4),
+    30% 50%,
+    rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 1) 100%
   );
   box-shadow: inset 0 0 2px #fff;
@@ -96,7 +97,7 @@ nav {
   cursor: pointer;
   transition: .4s all;
   &:hover {
-    height: 974px;
+    height: 100%;
     transition: 1s all;
     padding-bottom: 140px;
     .menuIcon {

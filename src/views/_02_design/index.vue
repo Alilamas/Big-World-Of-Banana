@@ -1,13 +1,13 @@
 <template>
   <div id="designIndex">
-    <h1 class="h1_web">Web</h1>
-    <h1 class="h1_design">design</h1>
-    <div class='vertical0'></div>
-    <div class='vertical1'></div>
-    <div class='transverse0'></div>
-    <div class='transverse1'></div>
-    
-
+    <div class="vertical0 pa"></div>
+    <div class="vertical1 pa"></div>
+    <div class="transverse0 pa"></div>
+    <div class="transverse1 pa"></div>
+    <h1 class="h1_web pa">Web</h1>
+    <h1 class="h1_design pa">design</h1>
+    <h5 class="h5_2021 pa">2021</h5>
+    <h5 class="h5_2021 pa">2021</h5>
   </div>
 </template>
 <script>
@@ -27,6 +27,55 @@ export default {
 h1 {
   text-align: center;
   color: #fff;
-  font-size: 86px;
+  font-size: 100px;
+  font-weight:900;
+  font-family: 'PermanentMarker'
+}
+.pa {
+  position: absolute;
+  z-index: 0;
+}
+.vertical0 {//垂直
+  width: 1px;
+  height: 100vh;
+  background: #66666666;
+  left: 35%;
+  top: 0;
+}
+.vertical1 {
+  width: 1px;
+  height: 100vh;
+  background: #66666666;
+  left: calc(35% + 229px);
+  top: 0;
+}
+.transverse0 {//横
+  width: 100vw;
+  height: 1px;
+  background: #66666666;
+  left: 0;
+  top: 30%;
+}
+.transverse1 {
+  width: 100vw;
+  height: 1px;
+  background: #66666666;
+  left: 0;
+  top: calc(30% + 178px);
+}
+.h1_web {
+  left: 35%;
+  top: calc(30% - 17px);
+}
+.h1_design {
+  left: calc(35% + 226px);
+  top: calc(30% + 82px);
+}
+.h5_2021 {
+  left: 35%;
+  top: 20%;
+  font-size: 18px;
+  color: #999999;
+  font-weight: 300;
 }
 </style>
