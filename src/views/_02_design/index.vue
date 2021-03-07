@@ -7,7 +7,7 @@
     <h1 class="h1_web pa">Web</h1>
     <h1 class="h1_design pa">design</h1>
     <h5 class="h5_2021 pa">2021</h5>
-    <h5 class="h5_2021 pa">2021</h5>
+    <h5 class="h5_banana pa">Premium</h5>
   </div>
 </template>
 <script>
@@ -29,7 +29,6 @@ h1 {
   color: #fff;
   font-size: 100px;
   font-weight:900;
-  font-family: 'PermanentMarker'
 }
 .pa {
   position: absolute;
@@ -77,5 +76,14 @@ h1 {
   font-size: 18px;
   color: #999999;
   font-weight: 300;
+  font-family: 'PoiretOne'
+}
+.h5_banana {
+  left: calc(35% + 277px);
+  top: calc(30% + 24px);
+  font-size: 36px;
+  color: yellow;
+  font-weight: 100;
+  font-family: 'Allura'
 }
 </style>
