@@ -1,13 +1,13 @@
 <template>
   <div id="design">
     <div class="background"></div>
-    <div class="banana">Banana</div>
     <nav>
       <div class="bg-top">
         <div class="menuIcon">
           <div class="line0"></div>
           <div class="line1"></div>
           <div class="line2"></div>
+          <banana></banana>
         </div>
       </div>
       <ul class="bg-bottom">
@@ -154,15 +154,5 @@ nav {
   svg {
     cursor: pointer;
   }
-}
-
-.banana {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  font-size: 20px;
-  color: #999;
-  font-weight: 300;
-  font-family: 'PoiretOne'
 }
 </style>
