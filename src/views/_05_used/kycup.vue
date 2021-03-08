@@ -1,7 +1,6 @@
 <template>
   <div id="kycup">
     <div class="part1">
-      <h5>部分一</h5>
       <img src="/static/used/kycup/缩放.png" class="p1a1" />
       <div class="p1a2">
         <p>立即报名</p>
