@@ -76,7 +76,7 @@ export default {
       routerList: [
         {
           name: "bASIC",
-          router: "graphical",
+          router: "basic",
         },
         {
           name: "dESIGN",

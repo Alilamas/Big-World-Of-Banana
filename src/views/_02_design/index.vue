@@ -8,9 +8,6 @@
     <h1 class="h1_design pa">design</h1>
     <h5 class="h5_2021 pa">2021</h5>
     <h5 class="h5_banana pa">Premium</h5>
-    <ul class="pushRouter">
-      <li @class="pushRouter('kycup')">kycup</li>
-    </ul>
   </div>
 </template>
 <script>
