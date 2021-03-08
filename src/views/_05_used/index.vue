@@ -1,9 +1,6 @@
 <template>
   <div>
     <nav>USED的home页</nav>
-    <ul>
-      <li @click="pushRouter('kycup')">kycup</li>
-    </ul>
   </div>
 </template>
 
