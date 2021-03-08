@@ -1,5 +1,5 @@
 export default [{
-  path: '/usedHome',
+  path: '/used',
   name: 'usedHome',
   component: () => import('@/views/_05_used/home'),
   meta: {
@@ -7,7 +7,7 @@ export default [{
   },
   children: [
     {
-      path: 'used',
+      path: '',
       name: 'used',
       component: () => import('@/views/_05_used'),
       meta: {
