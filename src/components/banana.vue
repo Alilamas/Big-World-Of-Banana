@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banana">Banana</div>
+    <div class="banana-logo">Banana</div>
   </div>
 </template>
 <script>
@@ -18,7 +18,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.banana {
+.banana-logo {
   position: fixed;
   right: 20px;
   bottom: 20px;

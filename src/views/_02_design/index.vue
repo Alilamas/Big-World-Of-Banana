@@ -8,6 +8,9 @@
     <h1 class="h1_design pa">design</h1>
     <h5 class="h5_2021 pa">2021</h5>
     <h5 class="h5_banana pa">Premium</h5>
+    <ul class="pushRouter">
+      <li @class="pushRouter('kycup')">kycup</li>
+    </ul>
   </div>
 </template>
 <script>
@@ -15,7 +18,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    pushRouter(name) {
+      this.$router.push({ name });
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -28,13 +35,14 @@ h1 {
   text-align: center;
   color: #fff;
   font-size: 100px;
-  font-weight:900;
+  font-weight: 900;
 }
 .pa {
   position: absolute;
   z-index: 0;
 }
-.vertical0 {//垂直
+.vertical0 {
+  //垂直
   width: 1px;
   height: 100vh;
   background: #66666666;
@@ -48,7 +56,8 @@ h1 {
   left: calc(35% + 229px);
   top: 0;
 }
-.transverse0 {//横
+.transverse0 {
+  //横
   width: 100vw;
   height: 1px;
   background: #66666666;
@@ -76,7 +85,7 @@ h1 {
   font-size: 18px;
   color: #999999;
   font-weight: 300;
-  font-family: 'PoiretOne'
+  font-family: "PoiretOne";
 }
 .h5_banana {
   left: calc(35% + 277px);
@@ -84,6 +93,11 @@ h1 {
   font-size: 36px;
   color: yellow;
   font-weight: 100;
-  font-family: 'Allura'
+  font-family: "Allura";
+}
+////////////////////////////////////////////////////////////////
+.pushRouter {
+  color: #fff;
+  cursor: pointer;
 }
 </style>

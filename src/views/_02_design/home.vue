@@ -1,13 +1,13 @@
 <template>
   <div id="design">
     <div class="background"></div>
+    <banana></banana>
     <nav>
       <div class="bg-top">
         <div class="menuIcon">
           <div class="line0"></div>
           <div class="line1"></div>
           <div class="line2"></div>
-          <banana></banana>
         </div>
       </div>
       <ul class="bg-bottom">
@@ -36,7 +36,7 @@
         </li>
       </ul>
     </nav>
-    <router-view />
+    <router-view  class="rv"/>
   </div>
 </template>
 <script>
@@ -72,6 +72,7 @@ export default {
     rgba(0, 0, 0, 1) 100%
   );
   box-shadow: inset 0 0 2px #fff;
+  z-index:1;
 }
 nav {
   float: left;
@@ -154,5 +155,9 @@ nav {
   svg {
     cursor: pointer;
   }
+}
+.rv {
+  position: relative;
+  z-index:10;
 }
 </style>

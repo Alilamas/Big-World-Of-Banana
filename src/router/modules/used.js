@@ -15,11 +15,11 @@ export default [{
       }
     },
     {
-      path: 'kylinCup',
-      name: 'kylinCup',
-      component: () => import('@/views/_05_used/kylinCup'),
+      path: 'kycup',
+      name: 'kycup',
+      component: () => import('@/views/_05_used/kycup'),
       meta: {
-        title: '麒麟杯'
+        title: '可以杯'
       }
     }
   ]
