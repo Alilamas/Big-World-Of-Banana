@@ -83,6 +83,10 @@ export default {
           router: "design",
         },
         {
+          name: "pOSTER",
+          router: "poster",
+        },
+        {
           name: "iLLUSION",
           router: "illusion",
         },
