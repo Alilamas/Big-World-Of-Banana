@@ -22,6 +22,14 @@
     <p></p>
     <b></b>
     <i></i>
+    <div class="magic">
+      <h5>HTML<b>&</b>CSS</h5>
+      <P>besign and bulid website</P>
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+      <div class="line line4"></div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
