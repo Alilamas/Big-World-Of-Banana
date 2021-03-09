@@ -21,6 +21,14 @@ export default [{
       meta: {
         title: '六边形的多种做法'
       }
+    },
+    {
+      path: '/cssWorld',
+      name: 'cssWorld',
+      component: () => import('@/views/_01_basic/cssWorld.vue'),
+      meta: {
+        title: '六边形的多种做法'
+      }
     }
   ]
 }]

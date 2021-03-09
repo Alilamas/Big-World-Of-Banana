@@ -1,8 +1,8 @@
 import Com from './modules/common'  //首页
+import Basic from './modules/basic'  //海报
 import Poster from './modules/poster'  //海报
-import Graphical from './modules/graphical'  //图形
 import Illusion from './modules/illusion'  //错觉
-import WebpPage from './modules/webpPage'  //图形
+import WebpPage from './modules/webpPage'  //页面
 import Used from './modules/used'  //用过的例子
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     component: () => import('@/layout/banana'),
     children: [
       ...Com, //首页
-      ...Graphical, //图形
+      ...Basic, //基础
       ...Poster, //海报
       ...Illusion, //错觉
       ...WebpPage, //页面
