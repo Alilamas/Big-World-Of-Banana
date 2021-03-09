@@ -1,5 +1,5 @@
 <template>
-  <div class="basicHome">
+  <div id="basicHome">
     <nav>
       <ul>
         <li @click="pushRouter('graphical')">图形graphical</li>
@@ -10,6 +10,9 @@
 </template>
 <style lang="scss" scoped>
 #basicHome {
+  background: linear-gradient(to right,#acacac, #eaeaea);
+  width: 100%;
+  min-height: 100vh;
 }
 nav {
   position: fixed;
