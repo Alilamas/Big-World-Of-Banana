@@ -61,13 +61,14 @@ $margin: ($width - $height/2)*$sqrt2;
     width: 2*$width;
     height: $height;
     position: absolute;
+    z-index: 10;
   }
   .line1 {
     background: #dd7951cc;
     transform:rotate(45deg);
     margin-left: $margin;
     margin-bottom: $margin;
-    z-index: 5;
+    z-index: 15;
   }
   .line2 {
     background: #c4bdabcc;
