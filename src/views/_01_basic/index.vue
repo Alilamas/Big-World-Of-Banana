@@ -1,5 +1,8 @@
 <template>
   <div id="basicIndex">
+    <ul>
+      <li @click="pushRouter('scss-study')">scss-study</li>
+    </ul>
     <div class="magic">
       <h5>HTML<b>&</b>CSS</h5>
       <P>besign and bulid website</P>
@@ -10,6 +13,15 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods:{
+    pushRouter(name) {
+      this.$router.push({name})
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 $sqrt2: 1.4158;
 $width: 200px;
