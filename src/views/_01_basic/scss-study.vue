@@ -3,6 +3,25 @@
     <h5>皇帝的SCSS教程</h5>
     <p class="jiafa">测试加法</p>
     <div class="mixin extend"></div>
+    <div class="test">测试mixin</div>
+    <ul class="through">
+      <h5>测试through</h5>
+      <li class="li li0"></li>
+      <li class="li li1"></li>
+      <li class="li li2"></li>
+      <li class="li li3"></li>
+      <li class="li li4"></li>
+      <li class="li li5"></li>
+    </ul>
+    <ul class="to">
+      <h5>测试to</h5>
+      <li class="li li0"></li>
+      <li class="li li1"></li>
+      <li class="li li2"></li>
+      <li class="li li3"></li>
+      <li class="li li4"></li>
+      <li class="li li5"></li>
+    </ul>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -82,5 +101,23 @@ h5 {
 //
 // #{}将带引号的字符串转化为无引号字符串
 //
+@mixin test($color:pink,$px:36,$border) {
+  color: $color;
+  font-size: #{$px}px;
+  border:$border
+}
+.test {
+  @include test($border:1px solid blue)
+}
+// @mixin test($color:null,$px:null {  //有些时候不想传很多，就把默认值设置为 null
 //
+// !default 这个很关键   scss的变量声明最好写在import前面
+//                      然后公共的scss文件里面的变量最好写上!default
+//@for $var from <start> through <end>和  
+//@for $var from <start> to <end>
+//
+//
+//
+//@each $header, $size in 
+
 </style>
