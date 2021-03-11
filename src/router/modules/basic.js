@@ -29,6 +29,14 @@ export default [{
       meta: {
         title: '六边形的多种做法'
       }
+    },
+    {
+      path: '/scss-study',
+      name: 'scss-study',
+      component: () => import('@/views/_01_basic/scss-study.vue'),
+      meta: {
+        title: 'scss-study'
+      }
     }
   ]
 }]
