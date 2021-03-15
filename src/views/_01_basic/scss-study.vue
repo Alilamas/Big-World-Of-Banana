@@ -1,5 +1,6 @@
 <template>
   <div class="scss-basic">
+    <cssLogo/>
     <h5>皇帝的SCSS教程</h5>
     <p class="jiafa">测试加法</p>
     <div class="mixin extend"></div>
@@ -30,6 +31,15 @@
     </ul>
   </div>
 </template>
+<script>
+import cssLogo from './components/css-logo'
+export default {
+  components: {
+    cssLogo
+  }
+
+}
+</script>
 <style lang="scss" scoped>
 $height: 20px;
 $width: 40px;
@@ -175,5 +185,22 @@ li {
 
 
 //  第四份
+//
 //  移动端优先
+.scss-basic { //先写移动端样式
+  // Mobile code
+    background: #000;
+  @media (min-width: 960px) { //然后通过媒体查询，继续加入PC端样式
+    // Desktop code
+    background: #fff;
+  }
+}
+//  因为自适应的原则就是从小变大，由简入繁，所以是以移动端为基础向PC端进行样式扩展的
+
+//  提前写好常规代码
+//  有很多代码基本上都是会通道的，比如 border-radius、 color、 font-weight、 font-size、 margin、
+//  position、 flex、 各类居中，这样可以提升项目的可维护性
+
+//  不要使用 ！important和 #id ！！！
+//  原因很简单啊，这2个css的宣扬成绩太高了，很容易出现问题。
 </style>
