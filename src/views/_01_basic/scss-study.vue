@@ -1,13 +1,13 @@
 <template>
   <div class="scss-basic">
-    <cssLogo/>
-    <underLine/>
+    <cssLogo />
+    <underLine />
     <h5>皇帝的SCSS教程</h5>
     <p class="jiafa">测试加法</p>
     <div class="mixin extend"></div>
     <div class="test">测试mixin</div>
     <ul class="through">
-      <h5>测试@for   through</h5>
+      <h5>测试@for through</h5>
       <li class="li li0">字体</li>
       <li class="li li1">字体</li>
       <li class="li li2">字体</li>
@@ -16,7 +16,7 @@
       <li class="li li5">字体</li>
     </ul>
     <ul class="to">
-      <h5>测试@for   to</h5>
+      <h5>测试@for to</h5>
       <li class="li li0">字体</li>
       <li class="li li1">字体</li>
       <li class="li li2">字体</li>
@@ -33,15 +33,14 @@
   </div>
 </template>
 <script>
-import cssLogo from './components/css-logo'
-import underLine from './components/under-line'
+import cssLogo from "./components/css-logo";
+import underLine from "./components/under-line";
 export default {
   components: {
     cssLogo,
-    underLine
-  }
-
-}
+    underLine,
+  },
+};
 </script>
 <style lang="scss" scoped>
 $height: 20px;
@@ -59,7 +58,7 @@ h5 {
 ul {
   h5 {
     display: inline-block;
-    font-size:24px;
+    font-size: 24px;
     padding: 10px;
     margin: 10px;
     border: 1px solid #5ceb1a;
@@ -166,13 +165,15 @@ li {
 //
 //@each $key, $value in的时候，@key可以直接写标签，也可以
 .each {
-  @each $header, $color in ('.each0': MediumVioletRed, '.each1': Chartreuse, '.each2': OrangeRed) {
+  @each $header,
+    $color
+      in (".each0": MediumVioletRed, ".each1": Chartreuse, ".each2": OrangeRed)
+  {
     #{$header} {
       color: $color;
     }
   }
 }
-
 
 //第三份
 
@@ -186,14 +187,15 @@ li {
 // }
 //  混合器作用域内的属性都是return的值，除此之外，还可以为函数传参数，也可以使用默认值（$color: red）或者 （$color:null）
 
-
 //  第四份
-//
+
 //  移动端优先
-.scss-basic { //先写移动端样式
+.scss-basic {
+  //先写移动端样式
   // Mobile code
-    background: #000;
-  @media (min-width: 960px) { //然后通过媒体查询，继续加入PC端样式
+  background: #000;
+  @media (min-width: 960px) {
+    //然后通过媒体查询，继续加入PC端样式
     // Desktop code
     background: #fff;
   }
@@ -206,4 +208,28 @@ li {
 
 //  不要使用 ！important和 #id ！！！
 //  原因很简单啊，这2个css的宣扬成绩太高了，很容易出现问题。
+
+//  描述性良好的命名
+//  比如 .aaa .bbb .asd 就很离谱，最好根据结构或者功能来命名，入 .form__title和 .Co__news
+
+//  写注释的时候
+.bad {
+  background-color: red; // 没在属性的上方写注释
+  /* padding-top: 30px;
+  width: 100% */
+}
+.good {
+  // 在属性的上方写注释
+  background-color: red;
+  // padding-top: 30px;
+  // width: 100%;
+}
+
+//  媒体查询
+.good {
+  //  首先，先手机端再PC端，由小至大
+  //  然后媒体查询最好在本业的最顶级scss选择器中，这样就不用嵌套到每一个选择器中了
+  @media (min-width: 568px) {
+  }
+}
 </style>
