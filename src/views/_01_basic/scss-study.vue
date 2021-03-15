@@ -1,6 +1,7 @@
 <template>
   <div class="scss-basic">
     <cssLogo/>
+    <underLine/>
     <h5>皇帝的SCSS教程</h5>
     <p class="jiafa">测试加法</p>
     <div class="mixin extend"></div>
@@ -33,9 +34,11 @@
 </template>
 <script>
 import cssLogo from './components/css-logo'
+import underLine from './components/under-line'
 export default {
   components: {
-    cssLogo
+    cssLogo,
+    underLine
   }
 
 }
@@ -96,7 +99,7 @@ ul {
 //应用
 .mixin {
   width: 100%;
-  height: 30px;
+  height: 50px;
   background: linear-gradient(pink, rgb(202, 77, 240), rgb(73, 100, 255));
   @include fixed-bottom;
 }
