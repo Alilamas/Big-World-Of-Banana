@@ -5,7 +5,7 @@
     <div class="mixin extend"></div>
     <div class="test">测试mixin</div>
     <ul class="through">
-      <h5>测试through</h5>
+      <h5>测试@for   through</h5>
       <li class="li li0">字体</li>
       <li class="li li1">字体</li>
       <li class="li li2">字体</li>
@@ -14,13 +14,19 @@
       <li class="li li5">字体</li>
     </ul>
     <ul class="to">
-      <h5>测试to</h5>
+      <h5>测试@for   to</h5>
       <li class="li li0">字体</li>
       <li class="li li1">字体</li>
       <li class="li li2">字体</li>
       <li class="li li3">字体</li>
       <li class="li li4">字体</li>
       <li class="li li5">字体</li>
+    </ul>
+    <ul class="each">
+      <h5>测试@each in</h5>
+      <li class="li each0">适中的紫罗兰红色</li>
+      <li class="li each1">查特酒绿</li>
+      <li class="li each2">橙红色</li>
     </ul>
   </div>
 </template>
@@ -36,6 +42,15 @@ $tine: 10;
 
 h5 {
   color: auto;
+}
+ul {
+  h5 {
+    display: inline-block;
+    font-size:24px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #5ceb1a;
+  }
 }
 .jiafa {
   width: $width * 10;
@@ -119,7 +134,7 @@ li {
 .through {
   @for $i from 0 through 5 {
     .li#{$i} {
-      color: ##{$i}#{$i*2}#{$i*3};
+      color: ##{$i}#{$i * 2}#{$i * 3};
       font-size: $i * 8px;
       margin-bottom: 10px;
     }
@@ -128,15 +143,20 @@ li {
 .to {
   @for $i from 0 to 5 {
     .li#{$i} {
-      color: ##{$i}#{$i*2}#{$i*3};
+      color: ##{$i}#{$i * 2}#{$i * 3};
       font-size: $i * 8px;
       margin-bottom: 10px;
     }
   }
 }
-//也就是说 through 是会包含<end>,而 to 不会
+//也就是说 through 是会包含<end>的数,而 to 不会
 //
-//
-//
-//@each $header, $size in
+//@each $key, $value in的时候，@key可以直接写标签，也可以
+.each {
+  @each $header, $color in ('.each0': MediumVioletRed, '.each1': Chartreuse, '.each2': OrangeRed) {
+    #{$header} {
+      color: $color;
+    }
+  }
+}
 </style>
