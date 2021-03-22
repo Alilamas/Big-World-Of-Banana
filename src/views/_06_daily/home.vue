@@ -3,7 +3,7 @@
     <nav>
       <Logo />
       <ul>
-        <li></li>
+        <li v-for="(li,index) in love" :key='index'>{{li.name}}</li>
       </ul>
     </nav>
     <router-view class="daliy_view"></router-view>
@@ -20,6 +20,7 @@ export default {
   data() {
     return {};
   },
+  mounted() {}
 };
 </script>
 <style lang="scss" scoped>
