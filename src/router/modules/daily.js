@@ -27,7 +27,7 @@ export default [{
       name: 'daily01',
       component: () => import('@/views/_06_daily/daily01'),
       meta: {
-        title: '每日情话'
+        title: '与山与海'
       }
     }
   ]
