@@ -94,6 +94,10 @@ export default {
           name: "uSED",
           router: "usedHome",
         },
+        {
+          name: "dAILY",
+          router: "daily",
+        },
       ],
     };
   },
