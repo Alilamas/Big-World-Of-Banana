@@ -7,6 +7,7 @@
       </ul>
     </nav>
     <router-view class="daliy_view"></router-view>
+    <banana/>
   </div>
 </template>
 
