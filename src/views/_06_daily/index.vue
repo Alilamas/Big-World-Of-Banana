@@ -8,13 +8,11 @@
 </template>
 
 <script>
-import Daily from "@/router/modules/daily"; //每日情话
 export default {
   data() {
     return {};
   },
   mounted() {
-    console.log(Daily);
   },
   methods: {
     pushRouter(name) {
@@ -34,6 +32,7 @@ $_decorate: calc(100% - #{$decorate});
   background: url("/static/daily/index.jpg") center no-repeat;
   background-size: cover;
   position: relative;
+  overflow:hidden;
 }
 .decorate,
 .mask {
