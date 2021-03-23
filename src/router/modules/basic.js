@@ -37,6 +37,14 @@ export default [{
       meta: {
         title: 'scss-study'
       }
+    },
+    {
+      path: '/animation',
+      name: 'animation',
+      component: () => import('@/views/_01_basic/animation.vue'),
+      meta: {
+        title: '动画学习'
+      }
     }
   ]
 }]

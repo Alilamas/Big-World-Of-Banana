@@ -2,6 +2,7 @@
   <div id="basicIndex">
     <ul>
       <li @click="pushRouter('scss-study')">scss-study</li>
+      <li @click="pushRouter('animation')">animation</li>
     </ul>
     <div class="magic">
       <h5>HTML<b>&</b>CSS</h5>
