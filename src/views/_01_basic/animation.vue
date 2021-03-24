@@ -33,10 +33,20 @@
         <div class="test3__6">下面</div>
       </div>
     </div>
+    <div class="test4">
+      <h5>测试backface-visibility</h5>
+      <div class="test4__1" @click="show('背面')">背面不可见，rotateY(90deg)之后就看不到了,</div>
+    </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+    show(log) {
+      console.log(log);
+    }
+  }
+};
 </script>
 <style lang="scss" scoped>
 .test {
@@ -96,18 +106,20 @@ export default {};
 }
 .test3 {
   &__main {
-    margin-top: 200px;
-    margin-left: 200px;
+    width: 150px;
+    height: 100px;
+    padding-top: 50px;
     display: flex;
     position: relative;
     transform-style: preserve-3d;
     perspective: 300px;
+    perspective-origin: 50px 100px;
     > div {
       position: absolute;
       left: 0;
       width: 100px;
       height: 100px;
-      opacity: .2;
+      opacity: 0.2;
     }
   }
   &__1 {
@@ -115,7 +127,7 @@ export default {};
   }
   &__2 {
     transform-origin: 0% 50%;
-    transform: rotateY(90deg) ;
+    transform: rotateY(90deg);
     background: blue;
   }
   &__3 {
@@ -136,6 +148,16 @@ export default {};
     transform-origin: 50% 100%;
     transform: rotateX(90deg);
     background: yellow;
+  }
+}
+.test4 {
+  .test4__1 {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background: #00c1de;
+    transform: rotateY(45deg);
+    backface-visibility: hidden;
   }
 }
 </style>
