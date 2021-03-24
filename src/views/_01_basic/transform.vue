@@ -90,6 +90,18 @@ export default {
   margin: 10px auto;
   border: 1px dashed #00c1de;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 50px;
+  font-size:24px;
+}
+p,
+span {
+  line-height: 25px;
+}
 .transform {
   padding-bottom: 200px;
 }
