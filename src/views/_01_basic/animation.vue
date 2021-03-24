@@ -35,7 +35,43 @@
     </div>
     <div class="test4">
       <h5>测试backface-visibility</h5>
-      <div class="test4__1" @click="show('背面')">背面不可见，rotateY(90deg)之后就看不到了,</div>
+      <div class="test4__1" @click="show('背面')">
+        背面不可见，rotateY(90deg)之后就看不到了
+      </div>
+    </div>
+    <div class="test5">
+      <h5>测试scale()为负数</h5>
+      <div class="test5__1">scale()为负数时，元素会翻转</div>
+      <p>
+        但是可以这样调整回来：transform: scale(-1) rotateY(180deg)
+        rotateX(180deg);
+      </p>
+    </div>
+    <div class="test6">
+      <h5>测试skewY</h5>
+      <div class="test6__1">skewY</div>
+    </div>
+    <div class="test7">
+      <h5>测试3d</h5>
+      <div class="test7__1">translate3d</div>
+      <h5>父元素中心点</h5>
+    </div>
+    <div class="test8">
+      <h5>测试scaleZ</h5>
+      <div class="test8__1">scaleZ</div>
+    </div>
+    <div class="test9">
+      <h5>测试立方体</h5>
+      <div class="area">
+        <div class="box">
+          <div class="test9__1"></div>
+          <div class="test9__2"></div>
+          <div class="test9__3"></div>
+          <div class="test9__4"></div>
+          <div class="test9__5"></div>
+          <div class="test9__6"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -44,11 +80,19 @@ export default {
   methods: {
     show(log) {
       console.log(log);
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
+@mixin ppp {
+  width: 90vw;
+  margin: 10px auto;
+  border: 1px dashed #00c1de;
+}
+.animation {
+  padding-bottom: 200px;
+}
 .test {
   margin-top: 30px;
   border-top: 1px solid #00c1de;
@@ -151,13 +195,118 @@ export default {
   }
 }
 .test4 {
-  .test4__1 {
+  &__1 {
     cursor: pointer;
     width: 100px;
     height: 100px;
     background: #00c1de;
     transform: rotateY(45deg);
     backface-visibility: hidden;
+  }
+}
+.test5 {
+  &__1 {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background: #00c1de;
+    transform: scale(-1);
+  }
+  p {
+    @include ppp;
+  }
+}
+.test6 {
+  background: #cccccc88;
+  margin-left: 100px;
+  &__1 {
+    border: 1px dashed #000;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background: #00c1de;
+    transform: skewY(45deg);
+    // transform: skewX(45deg) skewY(45deg);
+    // transform: skewY(45deg);
+  }
+}
+.test7 {
+  background: #00ff0088;
+  width: 102px;
+  margin-top: 100px;
+  margin-left: 100px;
+  // transform-style: preserve-3d;
+  perspective: 300px;
+  &__1 {
+    border: 1px dashed #000;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background: #00c1de;
+    transform: translate3d(0, 0, -200px);
+  }
+}
+.test8 {
+  background: #ff000088;
+  width: 102px;
+  margin-top: 20px;
+  margin-left: 100px;
+  // transform-style: preserve-3d;
+  perspective: 1000px;
+  &__1 {
+    border: 1px dashed #000;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background: #00c1de;
+    transform: scaleZ(10) rotateY(30deg);
+  }
+}
+.test9 {
+  background: #cccccc88;
+  .area {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    position: relative;
+    perspective: 300px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translateZ(-50px);
+    transform-style: preserve-3d;
+    &:hover {
+    transform: translateZ(-50px) rotateX(360deg);
+    transition: all 2s
+    }
+    > div {
+      width: 100px;
+      height: 100px;
+      background: #00c1de33;
+      box-sizing: border-box;
+      border: 1px dashed #000;
+      position: absolute;
+    }
+  }
+  &__1 {
+    transform: translateZ(50px);
+  }
+  &__2 {
+    transform: rotateX(180deg) translateZ(50px);
+  }
+  &__3 {
+    transform: rotateY(-90deg) translateZ(50px);
+  }
+  &__4 {
+    transform: rotateY(90deg) translateZ(50px);
+  }
+  &__5 {
+    transform: rotateX(90deg) translateZ(50px);
+  }
+  &__6 {
+    transform: rotateX(-90deg) translateZ(50px);
   }
 }
 </style>
