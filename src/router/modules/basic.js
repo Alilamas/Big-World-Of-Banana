@@ -39,11 +39,19 @@ export default [{
       }
     },
     {
-      path: '/animation',
-      name: 'animation',
-      component: () => import('@/views/_01_basic/animation.vue'),
+      path: '/transform',
+      name: 'transform',
+      component: () => import('@/views/_01_basic/transform.vue'),
       meta: {
-        title: '动画学习'
+        title: 'CSS3变形'
+      }
+    },
+    {
+      path: '/transition',
+      name: 'transition',
+      component: () => import('@/views/_01_basic/transition.vue'),
+      meta: {
+        title: 'CSS3过渡'
       }
     }
   ]

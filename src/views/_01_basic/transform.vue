@@ -1,5 +1,5 @@
 <template>
-  <div class="animation">
+  <div class="transform">
     <p>2012年9月，发布草案</p>
     <p>translateX()，translateY()，scaleX()，scaleY()，skewX()，skewY()</p>
     <p>translate()，scale()，skewX()，rotate(angle)，skew()</p>
@@ -90,7 +90,7 @@ export default {
   margin: 10px auto;
   border: 1px dashed #00c1de;
 }
-.animation {
+.transform {
   padding-bottom: 200px;
 }
 .test {
