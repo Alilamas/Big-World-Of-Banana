@@ -25,7 +25,7 @@
       <h5>贝塞尔曲线！bezier！</h5>
       <h5>函数名：cubic-bezier</h5>
       <p>意思为三次贝塞尔曲</p>
-      <p>工具网址 -> http://cubic-bezier.com</p>
+      <p>工具网址 -> http://cubic-bezier.com </p>
       <h5>部分三来了来了！！！</h5>
       <p>step()函数</p>
       <div class="test1">
