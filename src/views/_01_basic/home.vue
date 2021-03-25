@@ -9,16 +9,4 @@
   </div>
 </template>
 <style lang="scss" scoped>
-// #basicHome {
-// }
-// nav {
-//   position: fixed;
-//   left: 0;
-//   top: 0;
-//   ul {
-//     display: flex;
-//     li {
-//     }
-//   }
-// }
 </style>
