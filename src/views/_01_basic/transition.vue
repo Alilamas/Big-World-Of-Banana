@@ -142,7 +142,7 @@ span {
     transform:translate(0);//用来gui加速的
     &:hover {
       width: 100px;
-      height: 200px;
+      height: 200px; 
     }
   }
 }
