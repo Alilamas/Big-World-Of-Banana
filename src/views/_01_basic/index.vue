@@ -4,6 +4,7 @@
       <li @click="pushRouter('scss-study')">scss-study</li>
       <li @click="pushRouter('transform')">transform</li>
       <li @click="pushRouter('transition')">transition</li>
+      <li @click="pushRouter('animation')">animation</li>
     </ul>
     <div class="magic">
       <h5>HTML<b>&</b>CSS</h5>

@@ -53,6 +53,14 @@ export default [{
       meta: {
         title: 'CSS3过渡'
       }
+    },
+    {
+      path: '/animation',
+      name: 'animation',
+      component: () => import('@/views/_01_basic/animation.vue'),
+      meta: {
+        title: 'CSS3动画'
+      }
     }
   ]
 }]
