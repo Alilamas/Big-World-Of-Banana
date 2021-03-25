@@ -18,18 +18,18 @@
 </template>
 <script>
 export default {
-  methods:{
+  methods: {
     pushRouter(name) {
-      this.$router.push({name})
-    }
-  }
-}
+      this.$router.push({ name });
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 $sqrt2: 1.4158;
 $width: 200px;
 $height: 40px;
-$margin: ($width - $height/2)*$sqrt2;
+$margin: ($width - $height/2) * $sqrt2;
 
 #basicIndex {
   width: 100vw;
@@ -61,35 +61,28 @@ $margin: ($width - $height/2)*$sqrt2;
     font-size: 16px;
   }
   .line {
-    width: 2*$width;
+    width: 2 * $width;
     height: $height;
     position: absolute;
     z-index: 10;
+    transform-origin: 50% 5%;
   }
   .line1 {
     background: #dd7951cc;
-    transform:rotate(45deg);
-    margin-left: $margin;
-    margin-bottom: $margin;
+    transform: rotate(45deg) translateY($height * $sqrt2  - $margin);
     z-index: 15;
   }
   .line2 {
     background: #c4bdabcc;
-    transform:rotate(135deg);
-    margin-left: $margin;
-    margin-top: $margin;
+    transform: rotate(135deg) translateY($height * $sqrt2 - $margin);
   }
   .line3 {
     background: #53aafdcc;
-    transform:rotate(-135deg);
-    margin-right: $margin;
-    margin-top: $margin;
+    transform: rotate(-135deg) translateY($height * $sqrt2 - $margin);
   }
   .line4 {
     background: #a7d4a7cc;
-    transform:rotate(-45deg);
-    margin-right: $margin;
-    margin-bottom: $margin;
+    transform: rotate(-45deg) translateY($height * $sqrt2 - $margin);
   }
 }
 </style>

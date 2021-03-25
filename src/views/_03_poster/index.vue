@@ -1,46 +1,61 @@
 <template>
   <div class="poster__index">
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M21.1,-21.7C27.9,-14.3,34.5,-7.1,36.1,1.7C37.8,10.4,34.5,20.9,27.7,27.6C20.9,34.3,10.4,37.4,1.6,35.7C-7.2,34.1,-14.4,27.9,-19.6,21.1C-24.8,14.4,-27.9,7.2,-28.4,-0.5C-28.8,-8.1,-26.6,-16.2,-21.4,-23.6C-16.2,-31.1,-8.1,-37.8,-0.5,-37.3C7.1,-36.8,14.3,-29.1,21.1,-21.7Z"
-        width="100%"
-        height="100%"
-        transform="translate(50 50)"
-        stroke-width="0"
-        style="transition: all 0.3s ease 0s"
-        stroke="url(#sw-gradient)"
-      ></path>
-    </svg>
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M30,-28.9C37.3,-22.7,40.6,-11.4,38.4,-2.1C36.3,7.2,28.9,14.3,21.6,21.2C14.3,28.1,7.2,34.7,-0.2,34.9C-7.5,35,-15,28.7,-20.2,21.9C-25.4,15,-28.3,7.5,-30.1,-1.8C-31.9,-11.2,-32.7,-22.3,-27.5,-28.4C-22.3,-34.6,-11.2,-35.6,0.1,-35.8C11.4,-35.9,22.7,-35,30,-28.9Z"
-        width="100%"
-        height="100%"
-        transform="translate(50 50)"
-      ></path>
-    </svg>
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M24,-23C29.9,-18,32.8,-9,32.1,-0.7C31.4,7.6,27,15.2,21.1,20.5C15.2,25.9,7.6,29.1,-0.4,29.5C-8.4,29.9,-16.7,27.5,-23,22.1C-29.3,16.7,-33.5,8.4,-33.2,0.3C-33,-7.9,-28.3,-15.7,-22,-20.6C-15.7,-25.6,-7.9,-27.5,0.6,-28.1C9,-28.7,18,-27.9,24,-23Z"
-        width="100%"
-        height="100%"
-        transform="translate(50 50)"
-        stroke-width="0"
-      ></path>
-    </svg>
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M20.6,-19.3C26.9,-14.4,32.3,-7.2,32.9,0.6C33.5,8.4,29.3,16.8,23,24.1C16.8,31.5,8.4,37.9,0.4,37.5C-7.7,37.1,-15.3,30,-22.4,22.7C-29.4,15.3,-35.9,7.7,-36.4,-0.5C-37,-8.7,-31.5,-17.4,-24.5,-22.4C-17.4,-27.3,-8.7,-28.5,-0.8,-27.7C7.2,-27,14.4,-24.3,20.6,-19.3Z"
-        width="100%"
-        height="100%"
-        transform="translate(50 50)"
-        stroke-width="0"
-        style="transition: all 0.3s ease 0s"
-        stroke="url(#sw-gradient)"
-      ></path>
-    </svg>
-    <h1>WELCOME</h1>
-    <banana/>
+    <!-- <div class="first">
+      <div class="first__bg">
+        <div v-for="bg in 8" :key="bg" :class="`fbg${bg}`"></div>
+      </div>
+      <div class="first__text">
+        <span
+          v-for="(i, index) in 'WELCOME'"
+          :key="index"
+          :class="`ft${index + 1}`"
+          >{{ i }}</span
+        >
+      </div>
+    </div> -->
+    <div class="second">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M21.1,-21.7C27.9,-14.3,34.5,-7.1,36.1,1.7C37.8,10.4,34.5,20.9,27.7,27.6C20.9,34.3,10.4,37.4,1.6,35.7C-7.2,34.1,-14.4,27.9,-19.6,21.1C-24.8,14.4,-27.9,7.2,-28.4,-0.5C-28.8,-8.1,-26.6,-16.2,-21.4,-23.6C-16.2,-31.1,-8.1,-37.8,-0.5,-37.3C7.1,-36.8,14.3,-29.1,21.1,-21.7Z"
+          width="100%"
+          height="100%"
+          transform="translate(50 50)"
+          stroke-width="0"
+          style="transition: all 0.3s ease 0s"
+          stroke="url(#sw-gradient)"
+        ></path>
+      </svg>
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M30,-28.9C37.3,-22.7,40.6,-11.4,38.4,-2.1C36.3,7.2,28.9,14.3,21.6,21.2C14.3,28.1,7.2,34.7,-0.2,34.9C-7.5,35,-15,28.7,-20.2,21.9C-25.4,15,-28.3,7.5,-30.1,-1.8C-31.9,-11.2,-32.7,-22.3,-27.5,-28.4C-22.3,-34.6,-11.2,-35.6,0.1,-35.8C11.4,-35.9,22.7,-35,30,-28.9Z"
+          width="100%"
+          height="100%"
+          transform="translate(50 50)"
+        ></path>
+      </svg>
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M24,-23C29.9,-18,32.8,-9,32.1,-0.7C31.4,7.6,27,15.2,21.1,20.5C15.2,25.9,7.6,29.1,-0.4,29.5C-8.4,29.9,-16.7,27.5,-23,22.1C-29.3,16.7,-33.5,8.4,-33.2,0.3C-33,-7.9,-28.3,-15.7,-22,-20.6C-15.7,-25.6,-7.9,-27.5,0.6,-28.1C9,-28.7,18,-27.9,24,-23Z"
+          width="100%"
+          height="100%"
+          transform="translate(50 50)"
+          stroke-width="0"
+        ></path>
+      </svg>
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20.6,-19.3C26.9,-14.4,32.3,-7.2,32.9,0.6C33.5,8.4,29.3,16.8,23,24.1C16.8,31.5,8.4,37.9,0.4,37.5C-7.7,37.1,-15.3,30,-22.4,22.7C-29.4,15.3,-35.9,7.7,-36.4,-0.5C-37,-8.7,-31.5,-17.4,-24.5,-22.4C-17.4,-27.3,-8.7,-28.5,-0.8,-27.7C7.2,-27,14.4,-24.3,20.6,-19.3Z"
+          width="100%"
+          height="100%"
+          transform="translate(50 50)"
+          stroke-width="0"
+          style="transition: all 0.3s ease 0s"
+          stroke="url(#sw-gradient)"
+        ></path>
+      </svg>
+      <h1>WELCOME</h1>
+    </div>
+    <banana />
   </div>
 </template>
 
@@ -58,13 +73,76 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$shadow-size: 5px;
 .poster__index {
   background: #333333;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   overflow: hidden;
+}
+.first {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  @for $i from 1 through 8 {
+    .fbg#{$i} {
+      height: 100vh;
+      width: 12.5%;
+      position: absolute;
+      left: calc(12.5% * (#{$i} - 1));
+      background: hsl(calc(360 / 8 * #{$i - 1}) 100% 50%);
+      opacity: 0;
+      animation: 2s fbg ease-in-out 1 forwards;
+    }
+  }
+  @keyframes fbg {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    50% {
+      width: 12.5%;
+      opacity: 1;
+    }
+    100% {
+      width: 25%;
+      opacity: 0;
+    }
+  }
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    span {
+      font-size: 24px;
+      display: inline-block;
+      width: 32px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+    
+  @for $i from 1 through 7 {
+    .ft#{$i} {
+      background: hsl(calc(360 - 360 / 7 * #{$i}) 100% 50%);
+    }
+  }
+  }
+}
+$shadow-size: 5px;
+.second {
+  background: #333333;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  // opacity: 0;
 }
 svg {
   width: 30%;
@@ -125,11 +203,9 @@ h1 {
     text-shadow: $shadow-size 0px 0px lime;
   }
 }
-@each $index, $color, $time, $direvtion in 
-('1',tomato,4s,normal), 
-('2',gold,2s,normal), 
-('3',lime,6s,reverse), 
-('4',turquoise,3s,reverse)
+@each $index, $color, $time, $direvtion in ("1", tomato, 4s, normal),
+  ("2", gold, 2s, normal), ("3", lime, 6s, reverse),
+  ("4", turquoise, 3s, reverse)
 {
   svg:nth-child(#{$index}) {
     fill: $color;
