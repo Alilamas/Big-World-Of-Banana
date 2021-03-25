@@ -9,6 +9,7 @@
     <p>infinite，为无线，其他就是其他</p>
     <h5>-direction：播放方向</h5>
     <p>normal：正常反向</p>
+    <p>reverse：反常反向</p>
     <p>alternate：奇数(2n+1)正向，偶数(2n)反向</p>
     <h5>-play-stat：播放状态</h5>
     <p>一般适用于running和paused</p>

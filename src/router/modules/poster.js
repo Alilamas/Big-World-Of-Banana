@@ -6,14 +6,14 @@ export default [{
     title: 'CSS海报'
   },
   children: [{
-      path: '/',
+      path: '',
       name: 'poster',
       component: () => import('@/views/_03_poster'),
       meta: {
         title: '海报首页'
       }
     }, {
-      path: './01_design',
+      path: '01_design',
       name: '01_design',
       component: () => import('@/views/_03_poster/01_design'),
       meta: {
@@ -21,7 +21,7 @@ export default [{
       }
     },
     {
-      path: './38',
+      path: '38',
       name: '38',
       component: () => import('@/views/_03_poster/38'),
       meta: {
