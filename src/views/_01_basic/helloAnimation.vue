@@ -1,5 +1,5 @@
 <template>
-  <div id="basicIndex">
+  <div class="helloAnimation">
     <div class="magic">
       <div class="magic__box">
         <div class="magic__text">
@@ -56,7 +56,7 @@ $width: 200px;
 $height: 40px;
 $margin: $width - $height;
 
-#basicIndex {
+.helloAnimation {
   width: 100vw;
   height: 100vh;
   background: #393535;

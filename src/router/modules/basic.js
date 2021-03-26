@@ -39,25 +39,33 @@ export default [{
       }
     },
     {
-      path: '/transform',
+      path: '/helloAnimation',
+      name: 'helloAnimation',
+      component: () => import('@/views/_01_basic/helloAnimation.vue'),
+      meta: {
+        title: '动画大世界'
+      }
+    },
+    {
+      path: 'transform',
       name: 'transform',
-      component: () => import('@/views/_01_basic/transform.vue'),
+      component: () => import('@/views/_01_basic/animation/transform.vue'),
       meta: {
         title: 'CSS3变形'
       }
     },
     {
-      path: '/transition',
+      path: 'transition',
       name: 'transition',
-      component: () => import('@/views/_01_basic/transition.vue'),
+      component: () => import('@/views/_01_basic/animation/transition.vue'),
       meta: {
         title: 'CSS3过渡'
       }
     },
     {
-      path: '/animation',
+      path: 'animation',
       name: 'animation',
-      component: () => import('@/views/_01_basic/animation.vue'),
+      component: () => import('@/views/_01_basic/animation/animation.vue'),
       meta: {
         title: 'CSS3动画'
       }

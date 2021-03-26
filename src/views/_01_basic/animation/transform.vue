@@ -8,7 +8,17 @@
     <p>
       重置元素原点会影响旋转、缩放、倾斜，但是trnasale()不会，依旧会以元素中心为原点
     </p>
-    <p></p>
+    <div class='magic'>
+      <input v-model='List1Index'>
+      <ul>
+        <li v-for="(tf, index) in List1" :key="index" :class="List1Index == tf?'active':''" @click="List1Index = tf">
+          transform：{{ tf }}
+        </li>
+      </ul>
+      <div class='magic__r'>
+        <img src="/static/used/kycup/跳.png" :style="`transform:${List1Index}`">
+      </div>
+    </div>
     <div class="test">
       <div class="huabu">
         <div class="d1"></div>
@@ -77,6 +87,24 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      List1Index:'none',
+      List1: [
+        "none",
+        "translate(200px)",
+        "translate(100px,50px)",
+        "scale(2);",
+        "scale(2,0.5);",
+        "rotate(45deg)",
+        "rotate(0.5turn)",
+        "skewX(45deg)",
+        "skew(30deg, 20deg)",
+        'scale(0.5) translate(-100%, -100%);',
+        'rotateZ(90deg)',
+      ],
+    };
+  },
   methods: {
     show(log) {
       console.log(log);
@@ -96,7 +124,7 @@ h3,
 h4,
 h5 {
   line-height: 50px;
-  font-size:24px;
+  font-size: 24px;
 }
 p,
 span {
@@ -104,6 +132,22 @@ span {
 }
 .transform {
   padding-bottom: 200px;
+  min-height: 100vh;
+  background-color: #00000033;
+  transition: background-color 0.5s linear;
+  background-image: linear-gradient(white 2px, transparent 2px),
+    linear-gradient(90deg, white 2px, transparent 2px),
+    linear-gradient(#ffffff33 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff33 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  @media screen and (max-width: 1260px) {
+    background-color: pink;
+  }
+  @media screen and (max-width: 800px) {
+    transition: background-color 2s linear;
+    background-color: #22669988;
+  }
 }
 .test {
   margin-top: 30px;
@@ -290,8 +334,8 @@ span {
     transform: translateZ(-50px);
     transform-style: preserve-3d;
     &:hover {
-    transform: translateZ(-50px) rotateX(360deg);
-    transition: all 2s
+      transform: translateZ(-50px) rotateX(360deg);
+      transition: all 2s;
     }
     > div {
       width: 100px;
@@ -319,6 +363,39 @@ span {
   }
   &__6 {
     transform: rotateX(-90deg) translateZ(50px);
+  }
+}
+.magic {
+  margin: 50px 40px;
+  display: flex;
+  justify-content:left;
+  height: 450px;
+  ul {
+    margin-right: 220px;
+    li {
+      padding: 6px 10px;
+      border-bottom: 2px solid #000;
+      line-height: 25px;
+      cursor: pointer;
+      width: 320px;
+    }
+    li.active {
+      color: #fff;
+      background: #000;
+    }
+  }
+  .magic__r {
+    border: 5px dashed #000;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    img {
+      width: 200px;
+      position: relative;
+      left: -5px;
+      top: -5px;
+    z-index:-1;
+    }
   }
 }
 </style>
