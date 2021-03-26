@@ -52,7 +52,11 @@
       <div class="animation">
         <div class="canvas">
           <div calss="canvas__console"></div>
-          <div class="canvas__main">
+          <div
+            class="canvas__main"
+            :class="canvas__magic ? 'canvas__magic' : ''"
+            @click="canvas__magic = true"
+          >
             <div class="item" v-for="item in 30" :key="100 + item">
               <div v-for="i in 6" :key="1000 + i"></div>
             </div>
@@ -67,6 +71,7 @@ export default {
   data() {
     return {
       hello: false,
+      canvas__magic: false,
       lineList: [
         {
           name: "HTML",
@@ -136,7 +141,8 @@ $shadow-size: 5px;
       &__main {
         width: 100%;
         height: 100%;
-
+        filter: hue-rotate(0deg);
+        transition: all 1s ease 0s;
         .item {
           position: relative;
           width: 150px;
@@ -152,6 +158,8 @@ $shadow-size: 5px;
             height: 150px;
             background: #ff5500;
             box-shadow: 0 0 5px -3px #00000030 inset;
+            transition: all 1s ease 0s;
+            filter: hue-rotate(0deg);
           }
           > div:nth-child(2) {
             transform: rotateX(90deg) translate3d(0px, 7px, 7px);
@@ -184,7 +192,20 @@ $shadow-size: 5px;
             animation-delay: #{(($i - 1) * 0.05)}s;
             z-index: calc(100 + 30 - #{$i});
             > div {
-              filter: brightness(calc(1.95 - #{$i * 0.05})) saturate(1.5);
+              // filter:hue-rotate(0deg)
+              filter: hue-rotate(0deg) brightness(calc(1.95 - #{$i * 0.05})) saturate(1.5);
+            }
+          }
+        }
+      }
+      &__magic {
+        @for $i from 1 through 30 {
+          .item:nth-child(#{$i}) {
+            > div {
+              filter: hue-rotate(#{$i * 10 - 10}deg)
+                brightness(1.35)
+                saturate(1.25);
+              // filter: hue-rotate(#{$i * 10 - 10}deg);
             }
           }
         }
