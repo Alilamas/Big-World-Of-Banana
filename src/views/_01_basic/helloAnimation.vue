@@ -158,7 +158,7 @@ $shadow-size: 5px;
             height: 150px;
             background: #ff5500;
             box-shadow: 0 0 5px -3px #00000030 inset;
-            transition: all 1s ease 0s;
+            transition: all 1.5s ease-in-out;
           }
           > div:nth-child(2) {
             transform: rotateX(90deg) translate3d(0px, 7px, 7px);
