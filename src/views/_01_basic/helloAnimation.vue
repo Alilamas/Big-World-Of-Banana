@@ -47,16 +47,12 @@
       <h1>WELCOME</h1>
     </div>
     <div class="nav">
-      <div class="transform"></div>
-      <div class="transiton"></div>
-      <div class="animation">
+      <div class="transform" @click="pushRouter('transform')"></div>
+      <div class="transition" @click="pushRouter('transition')"></div>
+      <div class="animation" @click="pushRouter('animation')">
         <div class="canvas">
           <div calss="canvas__console"></div>
-          <div
-            class="canvas__main"
-            :class="canvas__magic ? 'canvas__magic' : ''"
-            @click="canvas__magic = true"
-          >
+          <div class="canvas__main">
             <div class="item" v-for="item in 30" :key="100 + item">
               <div v-for="i in 6" :key="1000 + i"></div>
             </div>
@@ -112,6 +108,7 @@ $shadow-size: 5px;
   > div {
     width: 100%;
     height: 33.334%;
+    cursor: pointer;
     overflow: hidden;
     &:hover {
       height: 100%;
@@ -121,7 +118,7 @@ $shadow-size: 5px;
   .transform {
     background: #000;
   }
-  .transiton {
+  .transition {
     background: #361d48;
   }
   //动画部分
@@ -205,14 +202,14 @@ $shadow-size: 5px;
           }
         }
       }
-      &__magic {
-        @for $i from 1 through 30 {
-          .item:nth-child(#{$i}) {
-            > div {
-              filter: hue-rotate(#{$i * 10 - 10}deg)
-                brightness(1.35)
-                saturate(1.25);
-            }
+    }
+    &:hover {
+      @for $i from 1 through 30 {
+        .item:nth-child(#{$i}) {
+          > div {
+            filter: hue-rotate(#{$i * 10 - 10}deg)
+              brightness(1.35)
+              saturate(1.25);
           }
         }
       }
