@@ -55,7 +55,10 @@ export default {
 $width: 200px;
 $height: 40px;
 $margin: $width - $height;
-
+$line3color: #53aafd;
+$line3colorOther: rgb(167, 203, 236);
+$line4color: #a7d4a7;
+$line4colorOther: #e4eee4;
 #basicIndex {
   width: 100vw;
   height: 100vh;
@@ -114,7 +117,7 @@ $margin: $width - $height;
   .line1 {
     z-index: 15;
   }
-  @each $index, $bg in (1: #dd7951, 2: #c4bdab, 3: #53aafd, 4: #a7d4a7) {
+  @each $index, $bg in (1: #dd7951, 2: #c4bdab, 3: $line3color, 4: $line4color) {
     .line#{$index} {
       background: $bg;
       transform: rotate(#{($index) * 90 - 45}deg)
@@ -147,7 +150,55 @@ $margin: $width - $height;
     }
   }
   .line3:hover {
+    background: radial-gradient(
+        circle,
+        transparent 20%,
+        $line3color 20%,
+        $line3color 80%,
+        transparent 80%,
+        transparent
+      ),
+      radial-gradient(
+          circle,
+          transparent 20%,
+          $line3color 20%,
+          $line3color 80%,
+          transparent 80%,
+          transparent
+        )
+        50px 50px,
+      linear-gradient($line3colorOther 8px, transparent 8px) 0 -4px,
+      linear-gradient(90deg, $line3colorOther 8px, transparent 8px) -4px 0;
+    background-color: $line3color;
+    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
     transition: height 0.5s cubic-bezier(1, 1.57, 0, 0.74);
+  }
+  .line4:hover {
+    background: linear-gradient(
+        135deg,
+        $line4color 21px,
+        $line4colorOther 22px,
+        $line4colorOther 24px,
+        transparent 24px,
+        transparent 67px,
+        $line4colorOther 67px,
+        $line4colorOther 69px,
+        transparent 69px
+      ),
+      linear-gradient(
+          225deg,
+          $line4color 21px,
+          $line4colorOther 22px,
+          $line4colorOther 24px,
+          transparent 24px,
+          transparent 67px,
+          $line4colorOther 67px,
+          $line4colorOther 69px,
+          transparent 69px
+        )
+        0 64px;
+    background-color: $line4color;
+    background-size: 64px 128px;
   }
 }
 </style>

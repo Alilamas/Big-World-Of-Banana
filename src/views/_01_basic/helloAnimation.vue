@@ -47,8 +47,8 @@
       <h1>WELCOME</h1>
     </div>
     <div class="nav">
-      <!-- <div class="transform"></div> -->
-      <!-- <div class="transiton"></div> -->
+      <div class="transform"></div>
+      <div class="transiton"></div>
       <div class="animation">
         <div class="canvas">
           <div calss="canvas__console"></div>
@@ -106,7 +106,7 @@ $shadow-size: 5px;
   height: 100vh;
   display: flex;
   overflow: hidden;
-  flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
   z-index: 103;
   > div {
@@ -114,12 +114,19 @@ $shadow-size: 5px;
     height: 33.334%;
     overflow: hidden;
   }
+  .transform {
+    background: #000;
+  }
+  .transiton {
+    background: #361D48;
+  }
   //动画部分
   .animation {
-    height: 100%;
     background: radial-gradient(#ffffff 15%, #b9b9b9 100%);
+    transition: all 0.5s;
     &:hover {
-      min-height: 50%;
+      height: 100%;
+    transition: all 0.5s;
     }
     .canvas {
       width: 100%;
@@ -191,7 +198,9 @@ $shadow-size: 5px;
             animation-delay: #{(($i - 1) * 0.05)}s;
             z-index: calc(100 + 30 - #{$i});
             > div {
-              filter: hue-rotate(0deg) brightness(calc(1.95 - #{$i * 0.05})) saturate(1.5);
+              filter: hue-rotate(0deg)
+                brightness(calc(1.95 - #{$i * 0.05}))
+                saturate(1.5);
             }
           }
         }
