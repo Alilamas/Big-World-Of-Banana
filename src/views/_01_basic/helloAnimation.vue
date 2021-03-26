@@ -113,21 +113,21 @@ $shadow-size: 5px;
     width: 100%;
     height: 33.334%;
     overflow: hidden;
+    &:hover {
+      height: 100%;
+      transition: all 0.5s;
+    }
   }
   .transform {
     background: #000;
   }
   .transiton {
-    background: #361D48;
+    background: #361d48;
   }
   //动画部分
   .animation {
     background: radial-gradient(#ffffff 15%, #b9b9b9 100%);
     transition: all 0.5s;
-    &:hover {
-      height: 100%;
-    transition: all 0.5s;
-    }
     .canvas {
       width: 100%;
       height: 100%;
