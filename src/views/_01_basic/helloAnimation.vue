@@ -159,7 +159,6 @@ $shadow-size: 5px;
             background: #ff5500;
             box-shadow: 0 0 5px -3px #00000030 inset;
             transition: all 1s ease 0s;
-            filter: hue-rotate(0deg);
           }
           > div:nth-child(2) {
             transform: rotateX(90deg) translate3d(0px, 7px, 7px);
@@ -192,7 +191,6 @@ $shadow-size: 5px;
             animation-delay: #{(($i - 1) * 0.05)}s;
             z-index: calc(100 + 30 - #{$i});
             > div {
-              // filter:hue-rotate(0deg)
               filter: hue-rotate(0deg) brightness(calc(1.95 - #{$i * 0.05})) saturate(1.5);
             }
           }
@@ -205,7 +203,6 @@ $shadow-size: 5px;
               filter: hue-rotate(#{$i * 10 - 10}deg)
                 brightness(1.35)
                 saturate(1.25);
-              // filter: hue-rotate(#{$i * 10 - 10}deg);
             }
           }
         }
