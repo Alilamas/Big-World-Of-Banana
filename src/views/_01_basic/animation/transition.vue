@@ -89,8 +89,8 @@ span {
   @media screen and (max-width: 1260px) {
     background-color: pink;
   }
-  @media screen and (max-width: 800px) {
-    transition: background-color 2s linear;
+  @media screen and (max-width: 900px) {
+    transition: background-color 1s linear;
     background-color: #22669988;
   }
 }

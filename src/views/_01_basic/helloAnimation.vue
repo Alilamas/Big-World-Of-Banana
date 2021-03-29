@@ -53,11 +53,49 @@
         @click="click('transform')"
       >
         <h5>transform</h5>
+        <p>动画搁浅了，我（小白）是废物</p>
+        <div class="transform__canvas">
+          <!-- <div class="text">
+            <div class="box">
+              <div
+                v-for="(t, index) in tfList"
+                :key="index"
+                :class="`text__${index}`"
+              >
+                {{ t }}
+              </div>
+              <div
+                v-for="(t, index) in tfList"
+                :key="index + 9"
+                :class="`text__${index + 9}`"
+              >
+                {{ t }}
+              </div>
+              <div
+                v-for="(t, index) in tfList"
+                :key="index + 18"
+                :class="`text__${index + 18}`"
+              >
+                {{ t }}
+              </div>
+            </div>
+          </div> -->
+          <div class="area">
+            <div class="box">
+              <div class="transform__1"></div>
+              <div class="transform__2"></div>
+              <div class="transform__3"></div>
+              <div class="transform__4"></div>
+              <div class="transform__5"></div>
+              <div class="transform__6"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="animation"
         :class="longIndex == 1 ? 'long' : ''"
-        @click="click('animation')"
+        @click="click('transition')"
       >
         <h5>transiton</h5>
         <h5>animation</h5>
@@ -78,9 +116,10 @@
 export default {
   data() {
     return {
-      hello: true,
+      hello: false,
       canvas__magic: false,
       longIndex: null,
+      tfList: "transform",
       lineList: [
         {
           name: "HTML",
@@ -119,6 +158,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 $shadow-size: 5px;
+$tfc1: #ff16cd;
+$tfc2: #ff2ef5;
+$tfc3: #ff64ff;
 .nav {
   width: 100vw;
   height: 100vh;
@@ -144,6 +186,101 @@ $shadow-size: 5px;
       position: absolute;
       color: #fff;
       top: 10px;
+    }
+    p {
+      color: #fff;
+      width: 100px;
+      position: absolute;
+      left: 20%;
+      top: 40%;
+    }
+    &__canvas {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .area {
+      width: 100px;
+      height: 100px;
+      margin: 0px auto;
+      position: relative;
+      perspective: 300px;
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        transform-style: preserve-3d;
+      animation: chuxian 1s ease-out 1 forwards;
+        > div {
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          // box-shadow: 0 0 5px 1px $tfc3 ;
+        }
+      }
+    }
+    @keyframes chuxian {
+      0% {
+
+        transform: scale(0) translateZ(-100px)  rotateX(-430deg) rotateY(-550deg);
+      }
+      100% {
+        transform: scale(1) rotateX(53deg) rotateY(150deg);
+      }
+    }
+    &__1 {
+      transform: translateZ(50px);
+      background: linear-gradient(to top left, $tfc1, $tfc3);
+    }
+    &__2 {
+      transform: rotateX(180deg) translateZ(50px);
+      background: linear-gradient(to top, $tfc1, $tfc3);
+    }
+    &__3 {
+      transform: rotateY(-90deg) translateZ(50px);
+      background: linear-gradient(to bottom, $tfc1, $tfc3);
+    }
+    &__4 {
+      transform: rotateY(90deg) translateZ(50px);
+      background: linear-gradient(to bottom, $tfc1, $tfc3);
+    }
+    &__5 {
+      transform: rotateX(90deg) translateZ(50px);
+      background: linear-gradient(to bottom right, $tfc1, $tfc3);
+    }
+    &__6 {
+      transform: rotateX(-90deg) translateZ(50px);
+      background: linear-gradient(to bottom right, $tfc1, $tfc3);
+    }
+    .text {
+      width: 100px;
+      height: 100px;
+      margin: 0px auto;
+      position: relative;
+      perspective: 800px;
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        transform-style: preserve-3d;
+        transform: translateZ(-200px) rotateX(-7deg) rotateZ(16deg);
+        div {
+          width: 48px;
+          height: 60px;
+          line-height: 60px;
+          text-align: center;
+          font-size: 36px;
+          color: #fff;
+          position: absolute;
+          transform-origin: 24px 60px 200px;
+        }
+      }
+      @for $i from 0 through 26 {
+        .text__#{$i} {
+          transform: translateZ(200px) rotateY(#{13.3333deg * $i});
+        }
+      }
     }
   }
   //动画部分

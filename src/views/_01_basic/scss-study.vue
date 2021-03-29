@@ -146,7 +146,7 @@ li {
 .through {
   @for $i from 0 through 5 {
     .li#{$i} {
-      color: ##{$i}#{$i * 2}#{$i * 3};
+      color: #{$i($i * 2)($i * 3)};
       font-size: $i * 8px;
       margin-bottom: 10px;
     }
@@ -155,7 +155,7 @@ li {
 .to {
   @for $i from 0 to 5 {
     .li#{$i} {
-      color: ##{$i}#{$i * 2}#{$i * 3};
+      color: #{$i($i * 2)($i * 3)};
       font-size: $i * 8px;
       margin-bottom: 10px;
     }
