@@ -1,35 +1,79 @@
 <template>
-  <div class="transform">
+  <div class="transform-study">
     <p>2012年9月，发布草案</p>
     <p>translateX()，translateY()，scaleX()，scaleY()，skewX()，skewY()</p>
     <p>translate()，scale()，skewX()，rotate(angle)，skew()</p>
     <p>rotate不能同时创传XY的参，但是rotate3D可以</p>
     <p>transform-origin设置元素变形的原点，可以设置在元素外</p>
-    <p>
-      重置元素原点会影响旋转、缩放、倾斜，但是trnasale()不会，依旧会以元素中心为原点
-    </p>
-    <div class='magic'>
-      <input v-model='List1Index'>
+    <h5>以下是几种经典的变形</h5>
+    <div class="magic">
       <ul>
-        <li v-for="(tf, index) in List1" :key="index" :class="List1Index == tf?'active':''" @click="List1Index = tf">
+        <li
+          v-for="(tf, index) in List1"
+          :key="index"
+          :class="List1Index == tf ? 'active' : ''"
+          @click="List1Index = tf"
+        >
           transform：{{ tf }}
         </li>
       </ul>
-      <div class='magic__r'>
-        <img src="/static/used/kycup/跳.png" :style="`transform:${List1Index}`">
+      <div class="magic__r">
+        <img
+          src="/static/used/kycup/跳.png"
+          :style="`transform:${List1Index}`"
+        />
       </div>
     </div>
-    <div class="test">
-      <div class="huabu">
+    <h5>transform-oringin</h5>
+    <p>设置元素变形时候的中心原点</p>
+    <div class="magic transform_origin">
+      <ul>
+        <li
+          v-for="(to, indexTO) in transformOriginList"
+          :key="indexTO"
+          :class="transformOriginIndex == to ? 'active' : ''"
+          @click="transformOriginIndex = to"
+        >
+          transform-origin：{{ to }}
+        </li>
+      </ul>
+      <div class="magic__r">
+        <img
+          src="/static/used/kycup/跳.png"
+          :style="`transform-origin:${transformOriginIndex}`"
+        />
+      </div>
+    </div>
+    <h5>perspective</h5>
+    <p>极具增加3D感的属性</p>
+    <h5>perspective2D</h5>
+    <div class="perspective2D">
+      <div class="perspective2D__main">
+        <div class="perspective2D__1"><div></div></div>
+        <div class="perspective2D__2"><div></div></div>
+      </div>
+    </div>
+    <h5>perspective3D</h5>
+    <div class="perspective3D">
+      <div class="perspective3D__huabu hu-1">
         <div class="d1"></div>
         <div class="d2"></div>
       </div>
-    </div>
-    <div class="test2">
-      <h5>测试perspective</h5>
-      <div class="test2__main">
-        <div class="test2__1"><div></div></div>
-        <div class="test2__2"><div></div></div>
+      <div class="perspective3D__huabu hu0">
+        <div class="d1"></div>
+        <div class="d2"></div>
+      </div>
+      <div class="perspective3D__huabu hu1">
+        <div class="d1"></div>
+        <div class="d2"></div>
+      </div>
+      <div class="perspective3D__huabu hu2">
+        <div class="d1"></div>
+        <div class="d2"></div>
+      </div>
+      <div class="perspective3D__huabu hu3">
+        <div class="d1"></div>
+        <div class="d2"></div>
       </div>
     </div>
     <div class="test3">
@@ -89,7 +133,7 @@
 export default {
   data() {
     return {
-      List1Index:'none',
+      List1Index: "none",
       List1: [
         "none",
         "translate(200px)",
@@ -100,8 +144,21 @@ export default {
         "rotate(0.5turn)",
         "skewX(45deg)",
         "skew(30deg, 20deg)",
-        'scale(0.5) translate(-100%, -100%);',
-        'rotateZ(90deg)',
+        "scale(0.5) translate(-100%, -100%);",
+        "rotateZ(90deg)",
+      ],
+      transformOriginIndex: "none",
+      transformOriginList: [
+        "left",
+        "center",
+        "right",
+        "right bottom",
+        "0px 0px",
+        "0px 100px",
+        "0px 200px",
+        "100px 100px",
+        "300px 100px",
+        "100px -100px",
       ],
     };
   },
@@ -130,10 +187,10 @@ p,
 span {
   line-height: 25px;
 }
-.transform {
+.transform-study {
   padding-bottom: 200px;
   min-height: 100vh;
-  background-color: #00000033;
+  background-color: #22669988;
   transition: background-color 0.5s linear;
   background-image: linear-gradient(white 2px, transparent 2px),
     linear-gradient(90deg, white 2px, transparent 2px),
@@ -142,112 +199,65 @@ span {
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
   @media screen and (max-width: 1260px) {
-    background-color: pink;
+    background-color: #00000033;
   }
   @media screen and (max-width: 800px) {
     transition: background-color 2s linear;
-    background-color: #22669988;
+    background-color: rgba(255, 192, 203, 0.555);
   }
 }
-.test {
-  margin-top: 30px;
-  border-top: 1px solid #00c1de;
-  padding: 30px 0 0 30px;
-  color: #fff;
-}
-.huabu {
-  display: inline-block;
-  border: 1px solid #00c1de;
-  transform-style: preserve-3d;
-  perspective-origin: 50px 50px;
-  transform: perspective(200px) rotateY(30deg);
-  position: relative;
-  height: 102px;
-  > div {
-    position: absolute;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000;
-    background: #00c1de;
-  }
-  .d1 {
-    opacity: 1;
-  }
-  .d2 {
-    opacity: 0.8;
-    transform-origin: 50% 0;
-    transform: rotateX(15deg) translateZ(15px);
-  }
-}
-.test2 {
-  &__main {
-    margin-left: 30px;
-    display: flex;
-    > div {
-      margin-right: 20px;
-      border: 1px solid #000;
-      > div {
-        width: 100px;
-        height: 100px;
-        background: #00c1de;
-        transform-origin: 50% 100%;
-        transform: rotateX(45deg);
-      }
-    }
-  }
-  &__1 {
-    transform-style: flat;
-  }
-  &__2 {
-    transform-style: preserve-3d;
-    perspective: 100px;
-  }
-}
+// transform//@at-root//@at-root//@at-root//@at-root//@at//@at-root
+
 .test3 {
   &__main {
-    width: 150px;
+    width: 100px;
     height: 100px;
-    padding-top: 50px;
     display: flex;
+    margin: 100px 200px;
     position: relative;
     transform-style: preserve-3d;
     perspective: 300px;
-    perspective-origin: 50px 100px;
+    perspective-origin: 50px 50px;
+    transform:rotateY(0deg);
     > div {
       position: absolute;
       left: 0;
       width: 100px;
       height: 100px;
-      opacity: 0.2;
     }
   }
   &__1 {
     background: red;
+      opacity: 0.5;
   }
   &__2 {
     transform-origin: 0% 50%;
     transform: rotateY(90deg);
     background: blue;
+      opacity: 0.5;
   }
   &__3 {
     transform: translateZ(-100px);
     background: red;
+      opacity: 0.2;
   }
   &__4 {
     transform-origin: 100% 50%;
     transform: rotateY(-90deg);
     background: blue;
+      opacity: 0.5;
   }
   &__5 {
     transform-origin: 50% 0%;
     transform: rotateX(-90deg);
     background: yellow;
+      opacity: 0.2;
   }
   &__6 {
     transform-origin: 50% 100%;
     transform: rotateX(90deg);
     background: yellow;
+      opacity: 0.2;
   }
 }
 .test4 {
@@ -368,7 +378,7 @@ span {
 .magic {
   margin: 50px 40px;
   display: flex;
-  justify-content:left;
+  justify-content: left;
   height: 450px;
   ul {
     margin-right: 220px;
@@ -394,7 +404,108 @@ span {
       position: relative;
       left: -5px;
       top: -5px;
-    z-index:-1;
+      z-index: -1;
+    }
+  }
+}
+
+.transform_origin {
+  &.magic {
+    height: 400px;
+  }
+  img {
+    animation: qingxie 2s linear infinite;
+  }
+}
+@keyframes xuanzhuan {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes suofang {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes qingxie {
+  0% {
+    transform: skewX(0deg);
+  }
+  50% {
+    transform: skewX(45deg);
+  }
+  100% {
+    transform: scale(1);
+    transform: skewX(0deg);
+  }
+}
+.perspective2D {
+  &__main {
+    margin-left: 30px;
+    display: flex;
+    > div {
+      margin-right: 20px;
+      border: 1px solid #000;
+      > div {
+        width: 100px;
+        height: 100px;
+        background: #00c1de;
+        transform-origin: 50% 50%;
+        transform: rotateX(45deg);
+      }
+    }
+  }
+  &__1 {
+    transform-style: flat;
+  }
+  &__2 {
+    transform-style: preserve-3d;
+    perspective: 100px;
+  }
+}
+.perspective3D {
+  margin-top: 30px;
+  border-top: 1px solid #00c1de;
+  padding: 30px 0 0 30px;
+  color: #fff;
+  &__huabu {
+    display: inline-block;
+    border: 1px solid #00c1de;
+    transform-style: preserve-3d;
+    perspective-origin: 50px 50px;
+    transform: rotateY(30deg);
+    position: relative;
+    height: 102px;
+    > div {
+      position: absolute;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+      background: #00c1de;
+    }
+  }
+  .d1 {
+    opacity: 1;
+  }
+  .d2 {
+    opacity: 0.8;
+    transform-origin: 50% 0;
+    transform: rotateX(15deg) translateZ(15px);
+  }
+  .hu-1 {
+    transform: none;
+  }
+  @for $i from 0 through 3 {
+    .hu#{$i} {
+      left: #{($i + 1) * 150px};
+      perspective: #{($i) * 200px};
     }
   }
 }

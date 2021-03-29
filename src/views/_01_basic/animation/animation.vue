@@ -50,7 +50,7 @@ span {
 .animation {
   padding-bottom: 200px;
   min-height: 100vh;
-  background-color: green;
+  background-color: #83b883;
   transition: background-color 0.5s linear;
   background-image: linear-gradient(white 2px, transparent 2px),
     linear-gradient(90deg, white 2px, transparent 2px),
