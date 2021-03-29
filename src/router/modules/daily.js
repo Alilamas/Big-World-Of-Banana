@@ -27,7 +27,17 @@ export default [{
       name: 'daily01',
       component: () => import('@/views/_06_daily/daily01'),
       meta: {
-        title: '与山与海'
+        title: '浪漫和爱',
+        date: '202103221722'
+      }
+    },
+    {
+      path: 'daily02',
+      name: 'daily02',
+      component: () => import('@/views/_06_daily/daily02'),
+      meta: {
+        title: '与山与海',
+        date: '202103291512'
       }
     }
   ]
