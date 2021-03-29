@@ -108,7 +108,7 @@ export default {
 .home {
   background: linear-gradient(to bottom right, #19193b, #171726);
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   .glass_bg1 {
     position: fixed;
