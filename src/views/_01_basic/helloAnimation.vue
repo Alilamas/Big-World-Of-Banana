@@ -55,7 +55,7 @@
         <h5>transform</h5>
         <p>动画搁浅了，我（小白）是废物</p>
         <div class="transform__canvas">
-          <!-- <div class="text">
+          <div class="text">
             <div class="box">
               <div
                 v-for="(t, index) in tfList"
@@ -64,22 +64,8 @@
               >
                 {{ t }}
               </div>
-              <div
-                v-for="(t, index) in tfList"
-                :key="index + 9"
-                :class="`text__${index + 9}`"
-              >
-                {{ t }}
-              </div>
-              <div
-                v-for="(t, index) in tfList"
-                :key="index + 18"
-                :class="`text__${index + 18}`"
-              >
-                {{ t }}
-              </div>
             </div>
-          </div> -->
+          </div>
           <div class="area">
             <div class="box">
               <div class="transform__1"></div>
@@ -119,7 +105,7 @@ export default {
       hello: false,
       canvas__magic: false,
       longIndex: null,
-      tfList: "transform",
+      tfList: "transformtransformtransform",
       lineList: [
         {
           name: "HTML",
@@ -161,6 +147,7 @@ $shadow-size: 5px;
 $tfc1: #ff16cd;
 $tfc2: #ff2ef5;
 $tfc3: #ff64ff;
+$test-width: 48px;
 .nav {
   width: 100vw;
   height: 100vh;
@@ -211,7 +198,7 @@ $tfc3: #ff64ff;
         height: 100px;
         position: absolute;
         transform-style: preserve-3d;
-      animation: chuxian 1s ease-out 1 forwards;
+        animation: chuxian 1s ease-out 1 forwards;
         > div {
           width: 100px;
           height: 100px;
@@ -222,8 +209,7 @@ $tfc3: #ff64ff;
     }
     @keyframes chuxian {
       0% {
-
-        transform: scale(0) translateZ(-100px)  rotateX(-430deg) rotateY(-550deg);
+        transform: scale(0) translateZ(-100px) rotateX(-430deg) rotateY(-550deg);
       }
       100% {
         transform: scale(1) rotateX(53deg) rotateY(150deg);
@@ -258,29 +244,42 @@ $tfc3: #ff64ff;
       height: 100px;
       margin: 0px auto;
       position: relative;
-      perspective: 800px;
+      perspective: 500px;
+      z-index: 11;
       .box {
         width: 100px;
         height: 100px;
         position: absolute;
+        transform-origin: $test-width/2 50%;
+      transform: translateZ(-100px) rotateZ(16deg)  rotateY(0deg);
         transform-style: preserve-3d;
-        transform: translateZ(-200px) rotateX(-7deg) rotateZ(16deg);
-        div {
-          width: 48px;
+        animation: Zzhou 8s linear infinite;
+        > div {
+          width: $test-width;
           height: 60px;
           line-height: 60px;
           text-align: center;
           font-size: 36px;
           color: #fff;
           position: absolute;
-          transform-origin: 24px 60px 200px;
         }
       }
       @for $i from 0 through 26 {
         .text__#{$i} {
-          transform: translateZ(200px) rotateY(#{13.3333deg * $i});
+          transform: rotateY(#{13.3333deg * $i}) translateZ(200px);
         }
       }
+    }
+  }
+  @keyframes Zzhou {
+    0% {
+      transform: translateZ(-100px) rotateZ(16deg)  rotateY(0deg);
+    }
+    50% {
+      transform: translateZ(-100px) rotateZ(-16deg) rotateY(-180deg) ;
+    }
+    100% {
+      transform: translateZ(-100px) rotateZ(16deg) rotateY(-360deg);
     }
   }
   //动画部分
