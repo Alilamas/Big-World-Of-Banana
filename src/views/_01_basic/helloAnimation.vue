@@ -97,7 +97,7 @@
         :class="longIndex == 1 ? 'long' : ''"
         @click="click('transition')"
       >
-        <h5>transiton</h5>
+        <h5>transition</h5>
         <h5>animation</h5>
         <div class="canvas">
           <div calss="canvas__console"></div>

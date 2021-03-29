@@ -5,15 +5,15 @@
     <p>四个属性值：-property，-duration，-timing-function，-delay</p>
     <p>分别是：过渡css属性，所需时间，动画函数，延迟时间</p>
     <div class="test">
-      <h5>测试transiton-property</h5>
+      <h5>测试transition-property</h5>
       <p>
         很多自己去看吧，主要是能有中点值，可以过渡，比如颜色、长度；但是如font-family这些就不行；
       </p>
-      <h5>测试transiton-duration</h5>
+      <h5>测试transition-duration</h5>
       <p>
         s和ms都可以，就是简单的一套动画完成所需的时间；<br />时间为0的话，就是没有过度，直接看到结果；<br />时间也是可以设置多个的，逗号分隔，与-property的对应；
       </p>
-      <h5>测试transiton-timing-function</h5>
+      <h5>测试transition-timing-function</h5>
       <h5>部分一：</h5>
       <p>ease：先快到慢；</p>
       <p>linear：均速；</p>
@@ -31,8 +31,8 @@
       <div class="test1">
         <div class="test1__1"></div>
       </div>
-      <h5>测试transiton-delay</h5>
-      <p>同transiton-duration</p>
+      <h5>测试transition-delay</h5>
+      <p>同transition-duration</p>
       <h5>CSS3触发 →</h5>
       <h5>通过伪元素触发</h5>
       <p>:active；:focus；:checked；:hover；</p>
