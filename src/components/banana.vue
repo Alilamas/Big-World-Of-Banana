@@ -25,6 +25,7 @@ export default {
   font-size: 20px;
   color: #999;
   font-weight: 300;
-  font-family: 'PoiretOne'
+  font-family: 'PoiretOne';
+  z-index:9999;
 }
 </style>

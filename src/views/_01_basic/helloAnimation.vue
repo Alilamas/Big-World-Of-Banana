@@ -47,9 +47,20 @@
       <h1>WELCOME</h1>
     </div>
     <div class="nav">
-      <div class="transform" @click="pushRouter('transform')"></div>
-      <div class="transition" @click="pushRouter('transition')"></div>
-      <div class="animation" @click="pushRouter('animation')">
+      <div
+        class="transform"
+        :class="longIndex == 0 ? 'long' : ''"
+        @click="click('transform')"
+      >
+        <h5>transform</h5>
+      </div>
+      <div
+        class="animation"
+        :class="longIndex == 1 ? 'long' : ''"
+        @click="click('animation')"
+      >
+        <h5>transiton</h5>
+        <h5>animation</h5>
         <div class="canvas">
           <div calss="canvas__console"></div>
           <div class="canvas__main">
@@ -60,14 +71,16 @@
         </div>
       </div>
     </div>
+    <banana />
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      hello: false,
+      hello: true,
       canvas__magic: false,
+      longIndex: null,
       lineList: [
         {
           name: "HTML",
@@ -92,6 +105,15 @@ export default {
     pushRouter(name) {
       this.$router.push({ name });
     },
+    click(name) {
+      name == "transform"
+        ? this.longIndex == 0
+          ? this.pushRouter(name)
+          : (this.longIndex = 0)
+        : this.longIndex == 1
+        ? this.pushRouter(name)
+        : (this.longIndex = 1);
+    },
   },
 };
 </script>
@@ -107,24 +129,37 @@ $shadow-size: 5px;
   z-index: 103;
   > div {
     width: 100%;
-    height: 33.334%;
+    height: 50%;
     cursor: pointer;
     overflow: hidden;
-    &:hover {
+    &.long {
       height: 100%;
       transition: all 0.5s;
     }
   }
   .transform {
+    position: relative;
     background: #000;
-  }
-  .transition {
-    background: #361d48;
+    h5 {
+      position: absolute;
+      color: #fff;
+      top: 10px;
+    }
   }
   //动画部分
   .animation {
     background: radial-gradient(#ffffff 15%, #b9b9b9 100%);
     transition: all 0.5s;
+    position: relative;
+    h5 {
+      position: absolute;
+      &:nth-child(1) {
+        top: 10px;
+      }
+      &:nth-child(2) {
+        top: 40px;
+      }
+    }
     .canvas {
       width: 100%;
       height: 100%;
@@ -255,11 +290,12 @@ $shadow-size: 5px;
   overflow: hidden;
   position: fixed;
   left: 0;
-  z-index: 103;
+  z-index: 200;
 }
 .helloHidden {
   opacity: 0;
   transition: 1s ease-in-out;
+  z-index: 10;
 }
 svg {
   width: 30%;
