@@ -1,6 +1,10 @@
 <template>
   <div class="ta">
-    <div class="transition">
+    <div
+      class="transition"
+      :class="hidden === true ? 'hidden' : hidden === false ? 'hiddening' : ''"
+      @click="tahidden"
+    >
       <css-doodle>
         :doodle { @grid: 12 / 50vmin 80vmin; perspective: 90vmin;
         perspective-origin: 0% -140%; transform: scale(.6); } :container {
@@ -30,7 +34,11 @@
         </ul>
       </div>
     </div>
-    <div class="animation">
+    <div
+      class="animation"
+      :class="hidden === true ? 'hidden' : hidden === false ? 'hiddening' : ''"
+      @click="tahidden"
+    >
       <css-doodle class="doodle" grid="12">
         :doodle { @grid: 12 / 100vmax; background: #0a0c27; filter: blur(.1px);
         transform: scale(1.1) } @random { border: 3px solid hsla(158, 70%, 68%,
@@ -57,6 +65,7 @@ import "css-doodle";
 export default {
   data() {
     return {
+      hidden: null,
       transitionList: ["-property", "-duration", "-timing-function", "-delay"],
       animationList: [
         "-name",
@@ -70,12 +79,22 @@ export default {
       ],
     };
   },
+  methods: {
+    tahidden() {
+      this.hidden === false
+        ? (this.hidden = true)
+        : this.hidden === null
+        ? (this.hidden = false)
+        : "";
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 .ta {
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
   display: flex;
   background-color: #83b883;
   background-image: linear-gradient(white 2px, transparent 2px),
@@ -105,6 +124,13 @@ export default {
         margin-top: 20px;
       }
     }
+  }
+  .hiddening {
+    cursor: pointer;
+  }
+  .hidden {
+    transition: all 1.5s linear;
+    opacity: 0;
   }
 }
 .transition {
