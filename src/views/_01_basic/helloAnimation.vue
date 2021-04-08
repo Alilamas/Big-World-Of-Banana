@@ -46,7 +46,7 @@
       </svg>
       <h1>WELCOME</h1>
     </div>
-    <div class="nav">
+    <div class="nav" v-if="!hello">
       <div
         class="transform"
         :class="longIndex == 0 ? 'long' : ''"
@@ -81,7 +81,7 @@
       <div
         class="animation"
         :class="longIndex == 1 ? 'long' : ''"
-        @click="click('transition')"
+        @click="click('transition&animation')"
       >
         <h5>transition</h5>
         <h5>&</h5>
@@ -103,28 +103,10 @@
 export default {
   data() {
     return {
-      hello: false,
+      hello: true,
       canvas__magic: false,
       longIndex: null,
-      tfList: "transformtransformtransform",
-      lineList: [
-        {
-          name: "HTML",
-          router: "html",
-        },
-        {
-          name: "CSS",
-          router: "css",
-        },
-        {
-          name: "animation",
-          router: "helloAnimation",
-        },
-        {
-          name: "SCSS",
-          router: "scss-study",
-        },
-      ],
+      tfList: "transformtransformtransform"
     };
   },
   methods: {
