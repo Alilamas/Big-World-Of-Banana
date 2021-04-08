@@ -55,19 +55,11 @@ export default [{
       }
     },
     {
-      path: 'transition',
-      name: 'transition',
-      component: () => import('@/views/_01_basic/animation/transition.vue'),
+      path: 'transition&animation',
+      name: 'transition&animation',
+      component: () => import('@/views/_01_basic/animation/transition&animation.vue'),
       meta: {
-        title: 'CSS3过渡'
-      }
-    },
-    {
-      path: 'animation',
-      name: 'animation',
-      component: () => import('@/views/_01_basic/animation/animation.vue'),
-      meta: {
-        title: 'CSS3动画'
+        title: 'CSS3过渡与动画'
       }
     }
   ]

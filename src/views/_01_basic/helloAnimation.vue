@@ -84,6 +84,7 @@
         @click="click('transition')"
       >
         <h5>transition</h5>
+        <h5>&</h5>
         <h5>animation</h5>
         <div class="canvas">
           <div calss="canvas__console"></div>
@@ -294,6 +295,9 @@ $test-width: 48px;
       }
       &:nth-child(2) {
         top: 40px;
+      }
+      &:nth-child(3) {
+        top: 70px;
       }
     }
     .canvas {
