@@ -1,6 +1,9 @@
 <template>
   <div id="basicIndex">
     <css-doodle>
+      :doodle { @grid: 20 / 100vmax; background: #0a0c27; font-family:
+      sans-serif; overflow: hidden; } :after { content: \@hex.@r(0x2500,
+      0x257f); color: hsla(@r360, 70%, 70%, @r.9); font-size: 8vmin; }
     </css-doodle>
     <div class="magic">
       <div class="magic__box">
@@ -66,10 +69,11 @@ $line4colorOther: #e4eee4;
   width: 100vw;
   height: 100vh;
   background: #393535;
-  overflow: hidden
+  overflow: hidden;
 }
 css-doodle {
-  width: 100vw;height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 .magic {
   position: fixed;
@@ -159,17 +163,57 @@ css-doodle {
     }
   }
   .line2:hover {
-    background: linear-gradient(
-        45deg,
-        #dca 12%,
-        transparent 0,
-        transparent 88%,
-        #dca 0
+    background-color: #556;
+    background-image: linear-gradient(
+        30deg,
+        #445 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #445 87.5%,
+        #445
       ),
-      linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
-      linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
-        #753;
-    background-size: 25px 25px;
+      linear-gradient(
+        150deg,
+        #445 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #445 87.5%,
+        #445
+      ),
+      linear-gradient(
+        30deg,
+        #445 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #445 87.5%,
+        #445
+      ),
+      linear-gradient(
+        150deg,
+        #445 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #445 87.5%,
+        #445
+      ),
+      linear-gradient(
+        60deg,
+        #99a 25%,
+        transparent 25.5%,
+        transparent 75%,
+        #99a 75%,
+        #99a
+      ),
+      linear-gradient(
+        60deg,
+        #99a 25%,
+        transparent 25.5%,
+        transparent 75%,
+        #99a 75%,
+        #99a
+      );
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
   }
   .line3:hover {
     background: radial-gradient(
