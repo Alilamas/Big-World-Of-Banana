@@ -30,7 +30,7 @@ export default {
           router: "html",
         },
         {
-          name: "CSS",
+          name: "CSS & JS",
           router: "css",
         },
         {
@@ -138,6 +138,7 @@ $line4colorOther: #e4eee4;
       }
     }
   }
+  .line2,
   .line3,
   .line4 {
     &:hover {
@@ -148,6 +149,12 @@ $line4colorOther: #e4eee4;
         line-height: $width;
       }
     }
+  }
+  .line2:hover{background: linear-gradient(45deg, #dca 12%, transparent 0, transparent 88%, #dca 0),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0) #753;
+    background-size: 25px 25px;
+
   }
   .line3:hover {
     background: radial-gradient(
