@@ -266,5 +266,16 @@ css-doodle {
     background-color: $line4color;
     background-size: 64px 128px;
   }
+  
+}
+css-doodle {
+  opacity: 0;
+  animation: cssDshow 4s ease-out 1 forwards;
+}
+@keyframes cssDshow {
+  to {
+    opacity: 1;
+  }
+  
 }
 </style>
