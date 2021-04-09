@@ -59,9 +59,7 @@
         <ul>
           <li v-for="a in animationList" :key="`a-${a}`">
             {{ a.zh
-            }}<span :class="hidden !== null ? 'spanShow' : ''">{{
-              a.cn
-            }}</span>
+            }}<span :class="hidden !== null ? 'spanShow' : ''">{{ a.cn }}</span>
           </li>
         </ul>
       </div>
@@ -69,7 +67,103 @@
     <div class="main">
       <div class="top">
         <h5>过渡 transition</h5>
-        <h5>动画 animation</h5>  
+        <ul>
+          <li v-for="i in transitionList" :key="`main-t-${i}`">
+            {{ i.zh }}
+          </li>
+        </ul>
+        <ul>
+          <li v-for="a in animationList" :key="`main-a-${a}`">
+            {{ a.zh }}
+          </li>
+        </ul>
+        <h5>动画 animation</h5>
+      </div>
+      <div class="_name">
+        <h5>transition-property和animation-name</h5>
+        <p>
+          这两个其实很像，都是定义动画影响哪些效果的，transition-property定义哪些属性被过渡效果影响，而animation-name则定义关键帧
+        </p>
+        <p>transition-property的值，none、all或者属性值，如：background</p>
+        <p>animation-name则只有none或者ident也就是通过@keyframes声明的动画</p>
+      </div>
+      <div class="_duration">
+        <h5>transition-duration和animation-duration</h5>
+        <div class="_duration_">
+          <p>1s</p>
+          <div class="_duration_1"></div>
+          <p>2s</p>
+          <div class="_duration_2"></div>
+        </div>
+      </div>
+      <div class="_timing-function">
+        <h5>transition-timing-function和animation-timing-function</h5>
+        <div class="_timing-function_">
+          <p>linear</p>
+          <div class="_timing-function_1"></div>
+          <p>ease</p>
+          <div class="_timing-function_2"></div>
+          <p>ease-in</p>
+          <div class="_timing-function_3"></div>
+          <p>ease-out</p>
+          <div class="_timing-function_4"></div>
+          <p>ease-in-out</p>
+          <div class="_timing-function_5"></div>
+        </div>
+      </div>
+      <div class="_delay">
+        <h5>transition-delay和animation-delay</h5>
+        <div class="_delay_">
+          <p>none</p>
+          <div class="_delay_0"></div>
+          <p>1s</p>
+          <div class="_delay_1"></div>
+          <p>3s</p>
+          <div class="_delay_2"></div>
+          <p>5s</p>
+          <div class="_delay_3"></div>
+        </div>
+      </div>
+      <div class="_iteration-count"  @click="iterationCount = true">
+        <h5>animation-iteration-count</h5>
+        <div class="_iteration-count_"  :class="iterationCount?'running':''">
+          <p>1次</p>
+          <div class="_iteration-count_0"></div>
+          <p>2次</p>
+          <div class="_iteration-count_1"></div>
+          <p>无线</p>
+          <div class="_iteration-count_2"></div>
+        </div>
+      </div>
+      <div class="_direction"  @click="direction = true">
+        <h5>animation-direction</h5>
+        <div class="_direction_"  :class="direction?'running':''">
+          <p>normal</p>
+          <div class="_direction_0"></div>
+          <p>reverse</p>
+          <div class="_direction_1"></div>
+          <p>alternate</p>
+          <div class="_direction_2"></div>
+          <p>alternate-reverse</p>
+          <div class="_direction_3"></div>
+        </div>
+      </div>
+      <div class="_play-state" @click="playState = !playState">
+        <h5>animation-play-state</h5>
+        <div class="_play-state_">
+          <div class='_play-state_0'  :class="playState?'running':'paused'"></div>
+        </div>
+      </div>
+      <div class="_fill-mode" @click="fillMode = true">
+        <h5>animation-fill-mode</h5>
+        <div class="_fill-mode_" :class="fillMode?'running':''">
+          <p>none</p>
+          <div class='_fill-mode_0'></div>
+          <p>forwards</p>
+          <div class='_fill-mode_1'></div>
+          <p>backwards</p>
+          <div class='_fill-mode_2'></div>
+        </div>
       </div>
     </div>
   </div>
@@ -80,6 +174,10 @@ export default {
   data() {
     return {
       hidden: true,
+      iterationCount:false,
+      playState: true,
+      direction:false,
+      fillMode:false,
       transitionList: [
         { zh: "-property", cn: "属性" },
         { zh: "-duration", cn: "过渡时间" },
@@ -149,7 +247,7 @@ export default {
         }
         .spanShow {
           opacity: 1;
-          transition: all .7s;
+          transition: all 0.7s;
         }
       }
     }
@@ -201,5 +299,195 @@ css-doodle,
   position: absolute;
   left: 0;
   top: 0;
+}
+.main {
+  position: relative;
+  z-index: 100;
+  h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  > div {
+    width: 100%;
+  }
+}
+.top {
+  ul {
+    display: flex;
+    li {
+      width: 130px;
+    }
+  }
+}
+._duration_ {
+  > div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: blue;
+  }
+  &:hover {
+    > div {
+      transform: translateX(400px);
+    }
+    ._duration_1 {
+      transition: 1s all;
+    }
+    ._duration_2 {
+      transition: 2s all;
+    }
+  }
+}
+._timing-function_ {
+  > div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: blue;
+  }
+  &:hover {
+    > div {
+      transform: translateX(400px);
+    }
+    ._timing-function_1 {
+      transition: all 2s linear;
+    }
+    ._timing-function_2 {
+      transition: all 2s ease;
+    }
+    ._timing-function_3 {
+      transition: all 2s ease-in;
+    }
+    ._timing-function_4 {
+      transition: all 2s ease-out;
+    }
+    ._timing-function_5 {
+      transition: all 2s ease-in-out;
+    }
+  }
+}
+._delay_ {
+  > div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: blue;
+  }
+  &:hover {
+    > div {
+      transform: translateX(400px);
+    }
+    ._delay_0 {
+      transition: 5s all 0s linear;
+    }
+    ._delay_1 {
+      transition: 5s all 1s linear;
+    }
+    ._delay_2 {
+      transition: 5s all 2s linear;
+    }
+    ._delay_3 {
+      transition: 5s all 5s linear;
+    }
+  }
+}
+._iteration-count_ {
+  > div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: blue;
+    animation: 2s youbiandong linear 1 paused;
+  }
+  &.running > div {
+    animation-play-state: running
+  }
+  ._iteration-count_0 {
+    animation-iteration-count:1;
+  }
+  ._iteration-count_1 {
+    animation-iteration-count:2;
+  }
+  ._iteration-count_2 {
+    animation-iteration-count:infinite;
+  }
+}
+._direction_ {
+  > div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: blue;
+    animation: 2s youbiandong linear infinite normal paused;
+  }
+  &.running > div {
+    animation-play-state: running
+  }
+  ._direction_0 {
+    animation-direction: normal;
+  }
+  ._direction_1 {
+    animation-direction:  reverse;
+  }
+  ._direction_2 {
+    animation-direction: alternate;
+  }
+  ._direction_3 {
+    animation-direction:alternate-reverse;
+  }
+}
+._play-state_ {
+  > div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: blue;
+  }
+  ._play-state_0 {
+    animation: 2s zuoyou linear infinite;
+  }
+  .running {
+    animation-play-state: running
+  }
+  .paused {
+    animation-play-state: paused
+  }
+}
+._fill-mode_ {
+  > div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: blue;
+    animation: 2s youbiandong linear 1 paused;
+  }
+  &.running > div {
+    animation-play-state: running
+  }
+  ._fill-mode_0 {
+    animation-fill-mode:none;
+  }
+  ._fill-mode_1 {
+    animation-fill-mode:forwards;
+  }
+  ._fill-mode_2 {
+    animation-fill-mode:backwards;
+  }
+}
+@keyframes youbiandong {
+  to {
+    transform: translateX(400px);
+  }
+}
+@keyframes zuoyou {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 </style>
