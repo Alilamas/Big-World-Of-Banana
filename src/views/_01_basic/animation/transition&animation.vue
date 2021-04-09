@@ -30,7 +30,10 @@
       <div class="title">
         <h5>transition</h5>
         <ul>
-          <li v-for="i in transitionList" :key="`t-${i}`">{{ i }}</li>
+          <li v-for="i in transitionList" :key="`t-${i}`">
+            <span :class="hidden !== null ? 'spanShow' : ''">{{ i.cn }}</span
+            >{{ i.zh }}
+          </li>
         </ul>
       </div>
     </div>
@@ -54,8 +57,19 @@
       <div class="title">
         <h5>animation</h5>
         <ul>
-          <li v-for="a in animationList" :key="`a-${a}`">{{ a }}</li>
+          <li v-for="a in animationList" :key="`a-${a}`">
+            {{ a.zh
+            }}<span :class="hidden !== null ? 'spanShow' : ''">{{
+              a.cn
+            }}</span>
+          </li>
         </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="top">
+        <h5>过渡 transition</h5>
+        <h5>动画 animation</h5>  
       </div>
     </div>
   </div>
@@ -65,17 +79,22 @@ import "css-doodle";
 export default {
   data() {
     return {
-      hidden: null,
-      transitionList: ["-property", "-duration", "-timing-function", "-delay"],
+      hidden: true,
+      transitionList: [
+        { zh: "-property", cn: "属性" },
+        { zh: "-duration", cn: "过渡时间" },
+        { zh: "-timing-function", cn: "过渡函数" },
+        { zh: "-delay", cn: "过渡延时" },
+      ],
       animationList: [
-        "-name",
-        "-duration",
-        "-timing-function",
-        "-delay",
-        "-iteration-count",
-        "-direction",
-        "-play-state",
-        "-fill-mode",
+        { zh: "-name", cn: "关键帧名称" },
+        { zh: "-duration", cn: "播放时间" },
+        { zh: "-timing-function", cn: "播放方式" },
+        { zh: "-delay", cn: "开始播放时间" },
+        { zh: "-iteration-count", cn: "播放次数" },
+        { zh: "-direction", cn: "播放方向" },
+        { zh: "-play-state", cn: "播放状态" },
+        { zh: "-fill-mode", cn: "时间外属性" },
       ],
     };
   },
@@ -95,7 +114,7 @@ export default {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  display: flex;
+  position: relative;
   background-color: #83b883;
   background-image: linear-gradient(white 2px, transparent 2px),
     linear-gradient(90deg, white 2px, transparent 2px),
@@ -110,8 +129,11 @@ export default {
     transition: background-color 1s linear;
     background-color: #22669988;
   }
-  > div {
-    width: 50%;
+  .transition,
+  .animation {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
     overflow: hidden;
     color: white;
     h5 {
@@ -122,6 +144,13 @@ export default {
       li {
         font-size: 18px;
         margin-top: 20px;
+        span {
+          opacity: 0;
+        }
+        .spanShow {
+          opacity: 1;
+          transition: all .7s;
+        }
       }
     }
   }
@@ -137,9 +166,13 @@ export default {
   background: #252b2a;
   position: relative;
   z-index: 10;
+  left: 0;
   .title {
     padding-right: 10px;
     text-align: right;
+  }
+  ul li span {
+    margin-right: 40px;
   }
   css-doodle {
     left: 50%;
@@ -150,9 +183,13 @@ export default {
 .animation {
   position: relative;
   z-index: 10;
+  left: 50%;
   .title {
     padding-left: 10px;
     text-align: left;
+  }
+  ul li span {
+    margin-left: 40px;
   }
 }
 .title {
