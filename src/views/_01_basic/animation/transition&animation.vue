@@ -64,7 +64,7 @@
         </ul>
       </div>
     </div>
-    <div class="main">
+    <div class="main" :class="hidden?'upupup':''">
       <div class="top">
         <h5>过渡 transition</h5>
         <ul>
@@ -173,7 +173,7 @@ import "css-doodle";
 export default {
   data() {
     return {
-      hidden: true,
+      hidden: false,
       iterationCount:false,
       playState: true,
       direction:false,
@@ -300,9 +300,11 @@ css-doodle,
   left: 0;
   top: 0;
 }
+.main.upupup {
+  z-index: 100;
+}
 .main {
   position: relative;
-  z-index: 100;
   h5 {
     font-size: 24px;
     margin-bottom: 20px;
