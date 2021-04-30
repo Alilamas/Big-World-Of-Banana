@@ -28,7 +28,7 @@ $_decorate: calc(100% - #{$decorate});
 .daily02 {
   width: 100vw;
   height: 100vh;
-  background: url("/static/daily/--daily--aads.png") center no-repeat;
+  background: url("/static/daily/daily03.png") center no-repeat;
   background-size: cover;
   position: relative;
   overflow:hidden;
