@@ -73,16 +73,22 @@ nav {
     padding: 0 20px;
     li {
       cursor: pointer;
-      padding: 10px 8px;
+      margin: 0 4px;
+      padding: 10px 4px;
       font-size: $size;
       width: $li__width;
       line-height: $li__lh;
+        transition: all .5s ease-out;
       background: #fff;
       background-clip: text;
       background-image: -webkit-linear-gradient(left, transparent, transparent);
       -webkit-text-fill-color: transparent;
       // color: #fff;
       // border-left: 1px solid #ffffff88;
+      &:hover {
+        transform: translateY(30px);
+        transition: all 1s;
+      }
     }
   }
 }
