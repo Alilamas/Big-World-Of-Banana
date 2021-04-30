@@ -39,6 +39,15 @@ export default [{
         title: '与山与海',
         date: '202103291512'
       }
+    },
+    {
+      path: 'daily03',
+      name: 'daily03',
+      component: () => import('@/views/_06_daily/daily03'),
+      meta: {
+        title: '请别再爱',
+        date: '202104300958'
+      }
     }
   ]
 }]
