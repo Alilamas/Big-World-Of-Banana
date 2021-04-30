@@ -21,6 +21,14 @@ export default [{
       meta: {
         title: '可以杯'
       }
+    },
+    {
+      path: 'parabola',
+      name: 'parabola',
+      component: () => import('@/views/_05_used/parabola'),
+      meta: {
+        title: '抛物线'
+      }
     }
   ]
 }]

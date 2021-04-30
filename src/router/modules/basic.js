@@ -61,6 +61,14 @@ export default [{
       meta: {
         title: 'CSS3过渡与动画'
       }
+    },
+    {
+      path: 'css_grid',
+      name: 'css-grid',
+      component: () => import('@/views/_01_basic/basic/grid.vue'),
+      meta: {
+        title: 'grid布局'
+      }
     }
   ]
 }]

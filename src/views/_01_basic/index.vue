@@ -32,8 +32,8 @@ export default {
     return {
       lineList: [
         {
-          name: "HTML",
-          router: "html",
+          name: "基础",
+          router: "css-grid",
         },
         {
           name: "CSS & JS",
@@ -150,9 +150,7 @@ css-doodle {
       }
     }
   }
-  .line2,
-  .line3,
-  .line4 {
+  .line {
     &:hover {
       height: $width;
       p {
