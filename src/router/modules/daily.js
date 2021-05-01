@@ -48,6 +48,15 @@ export default [{
         title: '请别再爱',
         date: '202104300958'
       }
+    },
+    {
+      path: 'daily04',
+      name: 'daily04',
+      component: () => import('@/views/_06_daily/daily04'),
+      meta: {
+        title: '情深一往',
+        date: '202105012350'
+      }
     }
   ]
 }]
