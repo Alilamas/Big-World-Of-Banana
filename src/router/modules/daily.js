@@ -57,6 +57,15 @@ export default [{
         title: '情深一往',
         date: '202105012350'
       }
+    },
+    {
+      path: 'daily05',
+      name: 'daily05',
+      component: () => import('@/views/_06_daily/daily05'),
+      meta: {
+        title: '幸运不够',
+        date: '202105021113'
+      }
     }
   ]
 }]
