@@ -66,6 +66,15 @@ export default [{
         title: '幸运不够',
         date: '202105021113'
       }
+    },
+    {
+      path: 'daily06',
+      name: 'daily06',
+      component: () => import('@/views/_06_daily/daily06'),
+      meta: {
+        title: '思君',
+        date: '202105060918'
+      }
     }
   ]
 }]
