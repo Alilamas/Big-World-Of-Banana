@@ -1,7 +1,7 @@
 import Com from './modules/common'  //首页
 import Basic from './modules/basic'  //海报
 import Poster from './modules/poster'  //海报
-import Illusion from './modules/illusion'  //错觉
+import Fun from './modules/fun'  //错觉
 import WebpPage from './modules/webpPage'  //页面
 import Used from './modules/used'  //用过的例子
 import Daily from './modules/daily'  //每日情话
@@ -17,7 +17,7 @@ const routes = [
       ...Com, //首页
       ...Basic, //基础
       ...Poster, //海报
-      ...Illusion, //错觉
+      ...Fun, //乐事
       ...WebpPage, //页面
       ...Used, //用过的例子
       ...Daily //每日情话

@@ -1,5 +1,5 @@
 <template>
-  <div id="illusionHome">
+  <div id="funHome">
     <div class="head">
       <div class="logo">
         <div class="is_hover">
@@ -40,7 +40,7 @@ export default {
   position: absolute;
 }
 
-#illusionHome {
+#funHome {
   min-height: 100vh;
   width: 100%;
   background: #000;

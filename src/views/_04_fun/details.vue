@@ -1,5 +1,5 @@
 <template>
-  <div id="illusionDetail">
+  <div id="funDetail">
     <div class="mach_bands">
       <div v-for="i in 6" :class="'band band_' + i" :key="i"></div>
     </div>
@@ -26,7 +26,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-// #illusionDetail {
+// #funDetail {
 // }
 .mach_bands {
   position: relative;

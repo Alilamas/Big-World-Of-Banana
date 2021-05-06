@@ -1,10 +1,10 @@
 <template>
-  <div id="illusionIndex">
+  <div id="funIndex">
     <ul>
       <li
         v-for="item in routerList"
         :key="item.id"
-        @click="toRouter('illusionDetails', 1)"
+        @click="toRouter('funDetails', 1)"
       >
         {{ item.name }}
       </li>

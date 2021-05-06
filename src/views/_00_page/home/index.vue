@@ -87,8 +87,8 @@ export default {
           router: "poster",
         },
         {
-          name: "iLLUSION",
-          router: "illusion",
+          name: "fUN",
+          router: "fun",
         },
         {
           name: "uSED",
@@ -97,7 +97,7 @@ export default {
         {
           name: "dAILY",
           router: "daily",
-        },
+        }
       ],
     };
   },
