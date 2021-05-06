@@ -4,11 +4,11 @@
       <div class="logo">
         <div class="is_hover">
           <div class="logo_box"></div>
-          <p>视觉错觉</p>
+          <p>就是玩儿</p>
         </div>
         <div class="no_hover">
           <div class="logo_box"></div>
-          <p>视觉错觉</p>
+          <p>就是玩儿</p>
         </div>
       </div>
     </div>
