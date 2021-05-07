@@ -75,6 +75,15 @@ export default [{
         title: '思君',
         date: '202105060918'
       }
+    },
+    {
+      path: 'daily07',
+      name: 'daily07',
+      component: () => import('@/views/_06_daily/daily07'),
+      meta: {
+        title: '我去接你',
+        date: '202105071355'
+      }
     }
   ]
 }]
