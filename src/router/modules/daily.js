@@ -84,6 +84,15 @@ export default [{
         title: '我去接你',
         date: '202105071355'
       }
+    },
+    {
+      path: 'daily08',
+      name: 'daily08',
+      component: () => import('@/views/_06_daily/daily08'),
+      meta: {
+        title: '请听我讲',
+        date: '202105082345'
+      }
     }
   ]
 }]
