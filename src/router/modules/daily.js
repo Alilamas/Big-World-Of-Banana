@@ -93,6 +93,15 @@ export default [{
         title: '请听我讲',
         date: '202105082345'
       }
+    },
+    {
+      path: 'daily09',
+      name: 'daily09',
+      component: () => import('@/views/_06_daily/daily09'),
+      meta: {
+        title: '答案很长',
+        date: '202105102329'
+      }
     }
   ]
 }]
