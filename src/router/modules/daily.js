@@ -99,7 +99,7 @@ export default [{
       name: 'daily09',
       component: () => import('@/views/_06_daily/daily09'),
       meta: {
-        title: '答案很长',
+        title: '等你',
         date: '202105102329'
       }
     }

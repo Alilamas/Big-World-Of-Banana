@@ -2,7 +2,7 @@
   <div class="daily02">
     <div class="mask"></div>
     <div class="decorate">
-      <h1>你走，我不送你，你来，无论多大风多大雨，我要去接你</h1>
+      <h1>水来我在水中等你，火来我在灰烬中等你</h1>
     </div>
     <p></p>
   </div>
@@ -28,7 +28,7 @@ $_decorate: calc(100% - #{$decorate});
 .daily02 {
   width: 100vw;
   height: 100vh;
-  background: url("/static/daily/daily08.png") center no-repeat;
+  background: url("/static/daily/daily09.png") center no-repeat;
   background-size: cover;
   background-position: 50% 80%;
   position: relative;
