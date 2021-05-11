@@ -32,7 +32,7 @@ export default {
     return {
       lineList: [
         {
-          name: "基础",
+          name: "Basic",
           router: "css-grid",
         },
         {
