@@ -270,6 +270,7 @@ nav {
   margin-bottom: 40px;
 }
 .m_jion {
+  display:inline-block;
   color: #fff;
   height: 240px;
   position: relative;
