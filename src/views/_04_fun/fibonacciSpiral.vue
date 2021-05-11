@@ -20,6 +20,7 @@
     <div class="fsbox_6 fsbox">
       <div class="fsc fsbox_6_circular"></div>
     </div>
+    <banana/>
   </div>
 </template>
 <style lang="scss" scoped>

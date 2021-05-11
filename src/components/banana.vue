@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banana-logo">Banana</div>
+    <div class="banana-logo" @click="pushRouter('home')">Banana</div>
   </div>
 </template>
 <script>
@@ -9,7 +9,7 @@ export default {
     return {};
   },
   methods: {
-    toRouter(name, id) {
+    pushRouter(name, id) {
       id
         ? this.$router.push({ name, params: { id } })
         : this.$router.push({ name });
@@ -25,7 +25,8 @@ export default {
   font-size: 20px;
   color: #999;
   font-weight: 300;
-  font-family: 'PoiretOne';
-  z-index:9999;
+  font-family: "PoiretOne";
+  z-index: 9999;
+  cursor: pointer;
 }
 </style>
