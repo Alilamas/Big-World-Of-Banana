@@ -102,6 +102,15 @@ export default [{
         title: '等你',
         date: '202105102329'
       }
+    },
+    {
+      path: 'daily10',
+      name: 'daily10',
+      component: () => import('@/views/_06_daily/daily10'),
+      meta: {
+        title: '陌上花开',
+        date: '202105111019'
+      }
     }
   ]
 }]
