@@ -111,6 +111,15 @@ export default [{
         title: '陌上花开',
         date: '202105111019'
       }
+    },
+    {
+      path: 'daily11',
+      name: 'daily11',
+      component: () => import('@/views/_06_daily/daily11'),
+      meta: {
+        title: '天涯海角',
+        date: '202105122340'
+      }
     }
   ]
 }]
