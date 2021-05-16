@@ -120,6 +120,15 @@ export default [{
         title: '天涯海角',
         date: '202105122340'
       }
+    },
+    {
+      path: 'daily12',
+      name: 'daily12',
+      component: () => import('@/views/_06_daily/daily12'),
+      meta: {
+        title: '青春期',
+        date: '202105162149'
+      }
     }
   ]
 }]
