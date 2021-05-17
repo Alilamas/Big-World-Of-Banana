@@ -23,6 +23,15 @@ export default [{
       }
     },
     {
+      path: 'love/:id',
+      name: 'love',
+      component: () => import('@/views/_06_daily/love'),
+      meta: {
+        title: '浪漫和爱',
+        date: '202103221722'
+      }
+    },
+    {
       path: 'daily01',
       name: 'daily01',
       component: () => import('@/views/_06_daily/daily01'),
