@@ -1,4 +1,4 @@
-import Com from './modules/common'  //首页
+import Com from './modules/common'  //首页其他
 import Basic from './modules/basic'  //海报
 import Poster from './modules/poster'  //海报
 import Fun from './modules/fun'  //错觉
@@ -14,7 +14,7 @@ const routes = [
     },
     component: () => import('@/layout/banana'),
     children: [
-      ...Com, //首页
+      ...Com, //首页金额其他
       ...Basic, //基础
       ...Poster, //海报
       ...Fun, //乐事

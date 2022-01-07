@@ -18,9 +18,9 @@
       <div class="fsc fsbox_5_circular"></div>
     </div>
     <div class="fsbox_6 fsbox">
-      <div class="fsc fsbox_6_circular"></div>
+      <div class="fsc fsbox_6_circular">((()))</div>
     </div>
-    <banana/>
+    <banana />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -66,7 +66,7 @@ h5 {
     background: #7d6a98;
     width: 248px;
     height: 248px;
-    transform: translate(-2px,-50%);
+    transform: translate(-2px, -50%);
   }
 }
 .fsbox_3 {
@@ -79,7 +79,7 @@ h5 {
     background: #56aca9;
     width: 150px;
     height: 150px;
-    transform: translate(-2px,-2px);
+    transform: translate(-2px, -2px);
   }
 }
 .fsbox_4 {
@@ -92,7 +92,7 @@ h5 {
     background: #da8f3c;
     width: 96px;
     height: 96px;
-    transform: translate(-50%,-2px);
+    transform: translate(-50%, -2px);
   }
 }
 .fsbox_5 {
